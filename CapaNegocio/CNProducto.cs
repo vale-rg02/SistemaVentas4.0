@@ -11,7 +11,7 @@ namespace CapaNegocio
 {
     public class CNProducto
     {
-        public DataTable Listar()
+        public static DataTable Listar()
         {
             CDProducto Datos = new CDProducto();
             return Datos.Listar(); 
@@ -52,13 +52,13 @@ namespace CapaNegocio
             return Datos.Editar(Datos);
         }
 
-        public string Eliminar(int idproducto)
+        public static string Eliminar(int idproducto)
         {
             CDProducto Datos = new CDProducto();
             Datos.IdProducto = idproducto;
             return Datos.Eliminar(Datos);
         }
-        public DataTable BuscarNombre(string textobuscar)
+        public static DataTable BuscarNombre(string textobuscar)
         {
             CDProducto Datos = new CDProducto();
             Datos.Buscar = textobuscar;

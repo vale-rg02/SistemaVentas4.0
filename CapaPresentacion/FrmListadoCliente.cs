@@ -24,11 +24,6 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FrmListadoCliente_Load(object sender, EventArgs e)
         {
             this.Top = 0;
@@ -66,12 +61,6 @@ namespace CapaPresentacion
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void btnnuevo_Click(object sender, EventArgs e)
-        {
-            FrmRegistrarCliente form = new FrmRegistrarCliente();
-            form.Show();
-            form.Hide();
-        }
 
         private void btneditar_Click(object sender, EventArgs e)
         {
@@ -102,9 +91,9 @@ namespace CapaPresentacion
         }
 
         private void btneliminar_Click(object sender, EventArgs e)
-{
-    try
-    {
+        {
+        try
+        {
         DialogResult opcion = MessageBox.Show(
             "¿Realmente desea eliminar el(los) registro(s)?",
             "Sistema de Ventas",
@@ -141,9 +130,9 @@ private void btnnuevo_Click_1(object sender, EventArgs e)
             form.Hide();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void btnsalir_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

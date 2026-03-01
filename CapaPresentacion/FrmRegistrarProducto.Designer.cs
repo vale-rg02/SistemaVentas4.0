@@ -84,6 +84,7 @@
             this.btncancelar.TabIndex = 32;
             this.btncancelar.Text = "&Cancelar";
             this.btncancelar.UseVisualStyleBackColor = true;
+            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
             // btnguardar
             // 
@@ -93,6 +94,7 @@
             this.btnguardar.TabIndex = 31;
             this.btnguardar.Text = "&Guardar";
             this.btnguardar.UseVisualStyleBackColor = true;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
             // rbtninactivo
             // 
@@ -333,11 +335,11 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
         public System.Windows.Forms.TextBox txtdescripcion;
-        private System.Windows.Forms.NumericUpDown numpventa;
-        private System.Windows.Forms.NumericUpDown numpcompra;
-        private System.Windows.Forms.NumericUpDown numstock;
         public System.Windows.Forms.TextBox txtidcategoria;
-        private System.Windows.Forms.DateTimePicker dateingreso;
-        private System.Windows.Forms.DateTimePicker datevencimiento;
+        public System.Windows.Forms.NumericUpDown numpcompra;
+        public System.Windows.Forms.NumericUpDown numpventa;
+        public System.Windows.Forms.NumericUpDown numstock;
+        public System.Windows.Forms.DateTimePicker dateingreso;
+        public System.Windows.Forms.DateTimePicker datevencimiento;
     }
 }

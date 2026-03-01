@@ -54,7 +54,6 @@
             this.label1.Size = new System.Drawing.Size(109, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Clientes";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel1
             // 
@@ -75,6 +74,7 @@
             this.btnsalir.TabIndex = 5;
             this.btnsalir.Text = "&Salir";
             this.btnsalir.UseVisualStyleBackColor = true;
+            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 
             // btnbuscar
             // 
@@ -103,7 +103,6 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Criterio de Busqueda";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // rdbtndni
             // 

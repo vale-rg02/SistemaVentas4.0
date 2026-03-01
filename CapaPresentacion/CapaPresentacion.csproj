@@ -103,6 +103,9 @@
     <EmbeddedResource Include="FrmListadoCliente.resx">
       <DependentUpon>FrmListadoCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmListadoProducto.resx">
+      <DependentUpon>FrmListadoProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmRegistrarCategoria.resx">
       <DependentUpon>FrmRegistrarCategoria.cs</DependentUpon>
     </EmbeddedResource>

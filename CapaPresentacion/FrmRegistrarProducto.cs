@@ -13,6 +13,7 @@ namespace CapaPresentacion
 {
     public partial class FrmRegistrarProducto : Form
     {
+
         public bool Edit = false;
 
         public bool Insert { get; internal set; }
@@ -23,7 +24,8 @@ namespace CapaPresentacion
 
         private void FrmRegistrarProducto_Load(object sender, EventArgs e)
         {
-
+            this.Top = 0;
+            this.Left = 0;
         }
 
         private void btnguardar_Click(object sender, EventArgs e)
@@ -40,9 +42,10 @@ namespace CapaPresentacion
 
             try
             {
-                if (this.txtnombre.Text == string.Empty || this.txtcodigo.Text == string.Empty)
+                if (this.txtnombre.Text == string.Empty || this.txtcodigo.Text == string.Empty || this.txtidcategoria.Text == string.Empty)
                 {
                     MessageBox.Show("Ingrese los datos del producto", "Sistema de Ventas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
                 }
 
                 decimal pcompra = numpcompra.Value;
@@ -122,4 +125,3 @@ namespace CapaPresentacion
 
     }
 }
-
