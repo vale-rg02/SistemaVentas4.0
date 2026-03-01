@@ -13,10 +13,9 @@ namespace CapaPresentacion
 {
     public partial class FrmRegistrarProducto : Form
     {
+        public bool ModoEdit = false;
+        public bool ModoInsert = false;
 
-        public bool Edit = false;
-
-        public bool Insert { get; internal set; }
         public FrmRegistrarProducto()
         {
             InitializeComponent();
@@ -26,6 +25,15 @@ namespace CapaPresentacion
         {
             this.Top = 0;
             this.Left = 0;
+
+            cmbcategoria.DataSource = CNProducto.ListarCategorias();
+            cmbcategoria.DisplayMember = "descripcion";
+            cmbcategoria.ValueMember = "idcategoria";
+
+            if (this.ModoInsert == false && this.ModoEdit == false)
+            {
+                this.ModoInsert = true;
+            }
         }
 
         private void btnguardar_Click(object sender, EventArgs e)
@@ -42,7 +50,7 @@ namespace CapaPresentacion
 
             try
             {
-                if (this.txtnombre.Text == string.Empty || this.txtcodigo.Text == string.Empty || this.txtidcategoria.Text == string.Empty)
+                if (this.txtnombre.Text == string.Empty || this.txtcodigo.Text == string.Empty)
                 {
                     MessageBox.Show("Ingrese los datos del producto", "Sistema de Ventas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -51,7 +59,6 @@ namespace CapaPresentacion
                 decimal pcompra = numpcompra.Value;
                 decimal pventa = numpventa.Value;
                 int stock = (int)numstock.Value;
-
                 DateTime fingreso = dateingreso.Value;
                 DateTime fvencimiento = datevencimiento.Value;
 
@@ -61,14 +68,13 @@ namespace CapaPresentacion
                     return;
                 }
 
-                int idcategoria = Convert.ToInt32(txtidcategoria.Text);
+                int idcategoria = Convert.ToInt32(cmbcategoria.Text);
 
-                if (this.Insert == true)
+                if (this.ModoInsert == true)
                 {
                     CNProducto cn = new CNProducto();
-
-                    cn.Guardar(
-                        this.txtcodigo.Text,  
+                    string resultado = cn.Guardar(
+                        this.txtcodigo.Text,
                         this.txtnombre.Text,
                         this.txtdescripcion.Text,
                         fingreso,
@@ -80,12 +86,21 @@ namespace CapaPresentacion
                         idcategoria
                     );
 
-                    MessageBox.Show("Producto registrado correctamente", "Sistema de Ventas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (resultado == "OK")
+                    {
+                        MessageBox.Show("Producto registrado correctamente", "Sistema de Ventas",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error: " + resultado, "Sistema de Ventas",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
                 }
-
-                else if (this.Edit == true)
+                else if (this.ModoEdit == true)
                 {
-                    CNProducto.Editar(
+                    string resultado = CNProducto.Editar(
                         Convert.ToInt32(this.txtidproducto.Text),
                         this.txtcodigo.Text,
                         this.txtnombre.Text,
@@ -99,15 +114,24 @@ namespace CapaPresentacion
                         idcategoria
                     );
 
-                    MessageBox.Show("Producto actualizado correctamente", "Sistema de Ventas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (resultado == "OK")
+                    {
+                        MessageBox.Show("Producto actualizado correctamente", "Sistema de Ventas",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error: " + resultado, "Sistema de Ventas",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
                 }
 
-                    this.Insert = false;
-                    this.Edit = false;
-
-                    FrmListadoProducto form = new FrmListadoProducto();
-                    form.Show();
-                    this.Hide();
+                this.ModoInsert = false;
+                this.ModoEdit = false;
+                FrmListadoProducto form = new FrmListadoProducto();
+                form.Show();
+                this.Hide();
             }
             catch (Exception ex)
             {
@@ -121,7 +145,5 @@ namespace CapaPresentacion
             form.Show();
             this.Hide();
         }
-
-
     }
 }

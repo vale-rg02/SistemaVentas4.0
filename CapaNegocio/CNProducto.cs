@@ -17,6 +17,11 @@ namespace CapaNegocio
             return Datos.Listar(); 
         }
 
+        public static DataTable ListarCategorias()
+        {
+            return CDCategoria.ListarCategorias();
+        }
+
         public string Guardar(string codigo, string nombre, string descripcion, DateTime fingreso, DateTime fvencimiento, double pcompra, double pventa, int stock, string estado, int idcategoria)
             {
                 CDProducto Datos = new CDProducto();

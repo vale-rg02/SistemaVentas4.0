@@ -15,8 +15,6 @@ namespace CapaPresentacion
     public partial class FrmListadoProducto : Form
     {
 
-        public bool Insert = false;
-        public bool Edit = false;
 
         public FrmListadoProducto()
         {
@@ -63,29 +61,24 @@ namespace CapaPresentacion
 
         private void btneditar_Click(object sender, EventArgs e)
         {
-            FrmRegistrarProducto form = new FrmRegistrarProducto();
-
-            form.Edit = true;
-
             if (dlistado.CurrentRow == null || dlistado.CurrentRow.IsNewRow)
             {
                 MessageBox.Show("Seleccione un registro válido para editar.",
                     "Sistema de Ventas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            foreach (DataGridViewCell cell in dlistado.CurrentRow.Cells)
-            {
-                MessageBox.Show(cell.OwningColumn.Name);
-            }
+
+            FrmRegistrarProducto form = new FrmRegistrarProducto();
+            form.ModoEdit = true;
 
             form.txtcodigo.Text = this.dlistado.CurrentRow.Cells["codigo"].Value.ToString();
             form.txtnombre.Text = this.dlistado.CurrentRow.Cells["nombre"].Value.ToString();
-            form.numpventa.Value = Convert.ToDecimal(this.dlistado.CurrentRow.Cells["pventa"].Value);
-            form.numpcompra.Value = Convert.ToDecimal(this.dlistado.CurrentRow.Cells["pcompra"].Value);
+            form.numpventa.Value = Convert.ToDecimal(this.dlistado.CurrentRow.Cells["precio_venta"].Value);
+            form.numpcompra.Value = Convert.ToDecimal(this.dlistado.CurrentRow.Cells["precio_compra"].Value);
             form.txtdescripcion.Text = this.dlistado.CurrentRow.Cells["descripcion"].Value.ToString();
-            form.txtidcategoria.Text = this.dlistado.CurrentRow.Cells["idcategoria"].Value.ToString();
-            form.dateingreso.Value = Convert.ToDateTime(this.dlistado.CurrentRow.Cells["dateingreso"].Value);
-            form.datevencimiento.Value = Convert.ToDateTime(this.dlistado.CurrentRow.Cells["datevencimiento"].Value);
+            form.cmbcategoria.SelectedValue = this.dlistado.CurrentRow.Cells["idcategoria"].Value;
+            form.dateingreso.Value = Convert.ToDateTime(this.dlistado.CurrentRow.Cells["f_ingreso"].Value);
+            form.datevencimiento.Value = Convert.ToDateTime(this.dlistado.CurrentRow.Cells["f_vencimiento"].Value);
             form.numstock.Value = Convert.ToDecimal(this.dlistado.CurrentRow.Cells["stock"].Value);
 
             string estado = this.dlistado.CurrentRow.Cells["estado"].Value.ToString();
@@ -144,10 +137,10 @@ namespace CapaPresentacion
         {
             FrmRegistrarProducto form = new FrmRegistrarProducto();
 
-            form.Insert = true;
+            form.ModoInsert = true;
 
             form.Show();
-            form.Hide();
+            this.Hide();
         }
 
         private void btnsalir_Click(object sender, EventArgs e)

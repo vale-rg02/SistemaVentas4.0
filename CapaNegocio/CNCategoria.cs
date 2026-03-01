@@ -11,6 +11,12 @@ namespace CapaNegocio
 {
     public class CNCategoria
     {
+        public static DataTable ListarCategorias()
+        {
+            CDCategoria datos = new CDCategoria();
+            return datos.Listar();
+        }
+
         public static DataTable Listar()
         {
             CDCategoria Datos = new CDCategoria();

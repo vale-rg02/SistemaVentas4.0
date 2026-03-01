@@ -50,9 +50,9 @@
             this.numpventa = new System.Windows.Forms.NumericUpDown();
             this.numpcompra = new System.Windows.Forms.NumericUpDown();
             this.numstock = new System.Windows.Forms.NumericUpDown();
-            this.txtidcategoria = new System.Windows.Forms.TextBox();
             this.dateingreso = new System.Windows.Forms.DateTimePicker();
             this.datevencimiento = new System.Windows.Forms.DateTimePicker();
+            this.cmbcategoria = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.numpventa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numpcompra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numstock)).BeginInit();
@@ -253,13 +253,6 @@
             this.numstock.Size = new System.Drawing.Size(120, 22);
             this.numstock.TabIndex = 45;
             // 
-            // txtidcategoria
-            // 
-            this.txtidcategoria.Location = new System.Drawing.Point(297, 299);
-            this.txtidcategoria.Name = "txtidcategoria";
-            this.txtidcategoria.Size = new System.Drawing.Size(246, 22);
-            this.txtidcategoria.TabIndex = 46;
-            // 
             // dateingreso
             // 
             this.dateingreso.Location = new System.Drawing.Point(44, 382);
@@ -274,14 +267,21 @@
             this.datevencimiento.Size = new System.Drawing.Size(200, 22);
             this.datevencimiento.TabIndex = 48;
             // 
+            // cmbcategoria
+            // 
+            this.cmbcategoria.Location = new System.Drawing.Point(297, 299);
+            this.cmbcategoria.Name = "cmbcategoria";
+            this.cmbcategoria.Size = new System.Drawing.Size(121, 24);
+            this.cmbcategoria.TabIndex = 0;
+            // 
             // FrmRegistrarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(586, 592);
+            this.Controls.Add(this.cmbcategoria);
             this.Controls.Add(this.datevencimiento);
             this.Controls.Add(this.dateingreso);
-            this.Controls.Add(this.txtidcategoria);
             this.Controls.Add(this.numstock);
             this.Controls.Add(this.numpcompra);
             this.Controls.Add(this.numpventa);
@@ -335,11 +335,11 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
         public System.Windows.Forms.TextBox txtdescripcion;
-        public System.Windows.Forms.TextBox txtidcategoria;
         public System.Windows.Forms.NumericUpDown numpcompra;
         public System.Windows.Forms.NumericUpDown numpventa;
         public System.Windows.Forms.NumericUpDown numstock;
         public System.Windows.Forms.DateTimePicker dateingreso;
         public System.Windows.Forms.DateTimePicker datevencimiento;
+        public System.Windows.Forms.ComboBox cmbcategoria;
     }
 }

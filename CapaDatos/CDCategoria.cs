@@ -45,6 +45,12 @@ namespace CapaDatos
             return resul;
         }
 
+        public static DataTable ListarCategorias()
+        {
+            CDCategoria datos = new CDCategoria();
+            return datos.Listar(); // llama a Listar() que ya funciona
+        }
+
         public string Guardar(CDCategoria cat)
         {
             string resul = "";
