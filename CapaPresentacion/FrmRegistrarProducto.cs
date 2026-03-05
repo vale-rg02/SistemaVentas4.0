@@ -68,7 +68,7 @@ namespace CapaPresentacion
                     return;
                 }
 
-                int idcategoria = Convert.ToInt32(cmbcategoria.Text);
+                int idcategoria = Convert.ToInt32(cmbcategoria.SelectedValue);
 
                 if (this.ModoInsert == true)
                 {
