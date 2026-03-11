@@ -1,5 +1,6 @@
 ﻿using CapaNegocio;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,8 +14,8 @@ namespace CapaPresentacion
 {
     public partial class FrmRegistrarProducto : Form
     {
-        public bool ModoEdit = false;
-        public bool ModoInsert = false;
+        public bool Insert = false;
+        public bool Edit = false;
 
         public FrmRegistrarProducto()
         {
@@ -26,20 +27,28 @@ namespace CapaPresentacion
             this.Top = 0;
             this.Left = 0;
 
-            cmbcategoria.DataSource = CNProducto.ListarCategorias();
-            cmbcategoria.DisplayMember = "descripcion";
-            cmbcategoria.ValueMember = "idcategoria";
-
-            if (this.ModoInsert == false && this.ModoEdit == false)
+            this.CargarCategoria();
+            
+            if (this.Insert == false && this.Edit == false)
             {
-                this.ModoInsert = true;
+                this.Insert = true;
             }
+
         }
+        private void CargarCategoria()
+        {
+            {
+                cboidcategoria.DataSource = CNCategoria.Listar();
+                cboidcategoria.ValueMember = "idcategoria";
+                cboidcategoria.DisplayMember = "descripcion";
+
+            }
+        }   
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
             string estado = "";
-            if (rbtnactivo.Checked == true)
+            if (rbactivo.Checked == true)
             {
                 estado = "ACTIVO";
             }
@@ -56,82 +65,66 @@ namespace CapaPresentacion
                     return;
                 }
 
-                decimal pcompra = numpcompra.Value;
-                decimal pventa = numpventa.Value;
-                int stock = (int)numstock.Value;
-                DateTime fingreso = dateingreso.Value;
-                DateTime fvencimiento = datevencimiento.Value;
-
-                if (fvencimiento < fingreso)
+                if (this.Insert == true)
                 {
-                    MessageBox.Show("La fecha de vencimiento no puede ser menor que la de ingreso");
+                    CNProducto producto = new CNProducto();
+                    string resultado = producto.Guardar(
+                    this.txtcodigo.Text,
+                    this.txtnombre.Text,
+                    this.txtdescripcion.Text,
+                    this.dtfechaingreso.Value,
+                    this.dtfechavencimiento.Value,
+                    Convert.ToDouble(txtpreciocompra.Text),
+                    Convert.ToDouble(txtprecioventa.Text),
+                    Convert.ToInt32(txtcantidad.Text),
+                    estado,
+                    Convert.ToInt32(this.cboidcategoria.SelectedValue));
+                
+                if (resultado == "OK")
+                {
+                    MessageBox.Show("Producto registrado correctamente", "Sistema de Ventas",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Error: " + resultado, "Sistema de Ventas",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+            }
+            else if (this.Edit == true)
+            {
+                string resultado = CNProducto.Editar(
+                    Convert.ToInt32(this.txtidproducto.Text),
+                    this.txtcodigo.Text,
+                    this.txtnombre.Text,
+                    this.txtdescripcion.Text,
+                    this.dtfechaingreso.Value,
+                    this.dtfechavencimiento.Value,
+                    Convert.ToDouble(txtpreciocompra.Text),
+                    Convert.ToDouble(txtprecioventa.Text),
+                    Convert.ToInt32(txtcantidad.Text),
+                    estado,
+                    Convert.ToInt32(this.cboidcategoria.SelectedValue));
 
-                int idcategoria = Convert.ToInt32(cmbcategoria.SelectedValue);
-
-                if (this.ModoInsert == true)
+                if (resultado == "OK")
                 {
-                    CNProducto cn = new CNProducto();
-                    string resultado = cn.Guardar(
-                        this.txtcodigo.Text,
-                        this.txtnombre.Text,
-                        this.txtdescripcion.Text,
-                        fingreso,
-                        fvencimiento,
-                        (double)pcompra,
-                        (double)pventa,
-                        stock,
-                        estado,
-                        idcategoria
-                    );
-
-                    if (resultado == "OK")
-                    {
-                        MessageBox.Show("Producto registrado correctamente", "Sistema de Ventas",
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error: " + resultado, "Sistema de Ventas",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
+                    MessageBox.Show("Producto actualizado correctamente", "Sistema de Ventas",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                else if (this.ModoEdit == true)
+                else
                 {
-                    string resultado = CNProducto.Editar(
-                        Convert.ToInt32(this.txtidproducto.Text),
-                        this.txtcodigo.Text,
-                        this.txtnombre.Text,
-                        this.txtdescripcion.Text,
-                        fingreso,
-                        fvencimiento,
-                        (double)pcompra,
-                        (double)pventa,
-                        stock,
-                        estado,
-                        idcategoria
-                    );
-
-                    if (resultado == "OK")
-                    {
-                        MessageBox.Show("Producto actualizado correctamente", "Sistema de Ventas",
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error: " + resultado, "Sistema de Ventas",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
+                    MessageBox.Show("Error: " + resultado, "Sistema de Ventas",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
+            }
 
-                this.ModoInsert = false;
-                this.ModoEdit = false;
-                FrmListadoProducto form = new FrmListadoProducto();
-                form.Show();
-                this.Hide();
+            this.Insert = false;
+            this.Edit = false;
+            FrmListadoProducto form = new FrmListadoProducto();
+            form.Show();
+            this.Hide();
             }
             catch (Exception ex)
             {

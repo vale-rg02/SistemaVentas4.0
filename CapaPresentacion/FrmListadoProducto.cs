@@ -26,6 +26,7 @@ namespace CapaPresentacion
             this.Top = 0;
             this.Left = 0;
             Mostrar();
+            
         }
 
         public void Mostrar()
@@ -37,7 +38,7 @@ namespace CapaPresentacion
         {
             this.dlistado.DataSource = CNProducto.BuscarNombre(txtbuscar.Text);
         }
-        public void BuscarDni()
+        public void BuscarCodigo()
         {
             this.dlistado.DataSource = CNProducto.BuscarCodigo(txtbuscar.Text);
         }
@@ -48,13 +49,13 @@ namespace CapaPresentacion
             {
                 BuscarNombre();
             }
-            else if (rdbtnidproducto.Checked)
+            else if (rbtncodigo.Checked)
             {
-                BuscarDni();
+                BuscarCodigo();
             }
             else
             {
-                MessageBox.Show("Seleccione un criterio de busqueda.", "Sistema de Ventas",
+                MessageBox.Show("Seleccione un criterio de búsqueda", "Sistema de Ventas",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -69,27 +70,26 @@ namespace CapaPresentacion
             }
 
             FrmRegistrarProducto form = new FrmRegistrarProducto();
-            form.ModoEdit = true;
 
             form.txtcodigo.Text = this.dlistado.CurrentRow.Cells["codigo"].Value.ToString();
             form.txtnombre.Text = this.dlistado.CurrentRow.Cells["nombre"].Value.ToString();
-            form.numpventa.Value = Convert.ToDecimal(this.dlistado.CurrentRow.Cells["precio_venta"].Value);
-            form.numpcompra.Value = Convert.ToDecimal(this.dlistado.CurrentRow.Cells["precio_compra"].Value);
+            form.txtprecioventa.Text = this.dlistado.CurrentRow.Cells["precio_venta"].Value.ToString();
+            form.txtpreciocompra.Text = this.dlistado.CurrentRow.Cells["precio_compra"].Value.ToString();
             form.txtdescripcion.Text = this.dlistado.CurrentRow.Cells["descripcion"].Value.ToString();
-            form.cmbcategoria.SelectedValue = this.dlistado.CurrentRow.Cells["idcategoria"].Value;
-            form.dateingreso.Value = Convert.ToDateTime(this.dlistado.CurrentRow.Cells["f_ingreso"].Value);
-            form.datevencimiento.Value = Convert.ToDateTime(this.dlistado.CurrentRow.Cells["f_vencimiento"].Value);
-            form.numstock.Value = Convert.ToDecimal(this.dlistado.CurrentRow.Cells["stock"].Value);
+            form.cboidcategoria.SelectedValue = this.dlistado.CurrentRow.Cells["idcategoria"].Value;
+            form.dtfechaingreso.Value = Convert.ToDateTime(this.dlistado.CurrentRow.Cells["f_ingreso"].Value);
+            form.dtfechavencimiento.Value = Convert.ToDateTime(this.dlistado.CurrentRow.Cells["f_vencimiento"].Value);
+            form.txtcantidad.Text = this.dlistado.CurrentRow.Cells["cantidad"].Value.ToString();
 
             string estado = this.dlistado.CurrentRow.Cells["estado"].Value.ToString();
 
             if (estado == "ACTIVO")
             {
-                form.rbtnactivo.Checked = true;
+                form.rbactivo.Checked = true;
             }
             else
             {
-                form.rbtninactivo.Checked = true;
+                form.rbinactivo.Checked = true;
             }
 
             form.Show();
@@ -136,16 +136,14 @@ namespace CapaPresentacion
         private void btnnuevo_Click_1(object sender, EventArgs e)
         {
             FrmRegistrarProducto form = new FrmRegistrarProducto();
-
-            form.ModoInsert = true;
-
             form.Show();
+            form.Insert = true;
             this.Hide();
         }
 
         private void btnsalir_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
     }
 }

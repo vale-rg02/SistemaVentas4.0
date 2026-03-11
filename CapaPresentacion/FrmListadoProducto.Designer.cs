@@ -37,7 +37,7 @@
             this.btnbuscar = new System.Windows.Forms.Button();
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rdbtnidproducto = new System.Windows.Forms.RadioButton();
+            this.rbtncodigo = new System.Windows.Forms.RadioButton();
             this.rbtnnombre = new System.Windows.Forms.RadioButton();
             this.Producto = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dlistado)).BeginInit();
@@ -125,7 +125,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.rdbtnidproducto);
+            this.groupBox1.Controls.Add(this.rbtncodigo);
             this.groupBox1.Controls.Add(this.rbtnnombre);
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
@@ -134,16 +134,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Criterio de Busqueda";
             // 
-            // rdbtnidproducto
+            // rbtncodigo
             // 
-            this.rdbtnidproducto.AutoSize = true;
-            this.rdbtnidproducto.Location = new System.Drawing.Point(92, 36);
-            this.rdbtnidproducto.Name = "rdbtnidproducto";
-            this.rdbtnidproducto.Size = new System.Drawing.Size(93, 20);
-            this.rdbtnidproducto.TabIndex = 1;
-            this.rdbtnidproducto.TabStop = true;
-            this.rdbtnidproducto.Text = "IdProducto";
-            this.rdbtnidproducto.UseVisualStyleBackColor = true;
+            this.rbtncodigo.AutoSize = true;
+            this.rbtncodigo.Location = new System.Drawing.Point(92, 36);
+            this.rbtncodigo.Name = "rbtncodigo";
+            this.rbtncodigo.Size = new System.Drawing.Size(72, 20);
+            this.rbtncodigo.TabIndex = 1;
+            this.rbtncodigo.TabStop = true;
+            this.rbtncodigo.Text = "Código";
+            this.rbtncodigo.UseVisualStyleBackColor = true;
             // 
             // rbtnnombre
             // 
@@ -201,7 +201,7 @@
         private System.Windows.Forms.Button btnbuscar;
         private System.Windows.Forms.TextBox txtbuscar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton rdbtnidproducto;
+        private System.Windows.Forms.RadioButton rbtncodigo;
         private System.Windows.Forms.RadioButton rbtnnombre;
         private System.Windows.Forms.Label Producto;
     }
