@@ -15,7 +15,7 @@ namespace SistemaVentas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CapaPresentacion.FrmRegistrarProducto());
+            Application.Run(new CapaPresentacion.FrmListadoProducto());
         }
     }
 

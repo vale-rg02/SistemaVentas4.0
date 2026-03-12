@@ -63,9 +63,7 @@ namespace CapaPresentacion
 
                 if (this.Insert == true)
                 {
-                    CNProducto producto = new CNProducto();
-                    string resultado = producto.Guardar(
-                    this.txtcodigo.Text,
+                    CNProducto.Guardar(this.txtcodigo.Text,
                     this.txtnombre.Text,
                     this.txtdescripcion.Text,
                     this.dtfechaingreso.Value,
@@ -75,49 +73,29 @@ namespace CapaPresentacion
                     Convert.ToInt32(txtcantidad.Text),
                     estado,
                     Convert.ToInt32(this.cboidcategoria.SelectedValue));
-                
-                if (resultado == "OK")
-                {
                     MessageBox.Show("Producto registrado correctamente", "Sistema de Ventas",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                else
+                else if (this.Edit == true)
                 {
-                    MessageBox.Show("Error: " + resultado, "Sistema de Ventas",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-            }
-            else if (this.Edit == true)
-            {
-                string resultado = CNProducto.Editar(
-                    Convert.ToInt32(this.txtidproducto.Text),
-                    this.txtcodigo.Text,
-                    this.txtnombre.Text,
-                    this.txtdescripcion.Text,
-                    this.dtfechaingreso.Value,
-                    this.dtfechavencimiento.Value,
-                    Convert.ToDouble(txtpreciocompra.Text),
-                    Convert.ToDouble(txtprecioventa.Text),
-                    Convert.ToInt32(txtcantidad.Text),
-                    estado,
-                    Convert.ToInt32(this.cboidcategoria.SelectedValue));
-
-                if (resultado == "OK")
-                {
-                    MessageBox.Show("Producto actualizado correctamente", "Sistema de Ventas",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Error: " + resultado, "Sistema de Ventas",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-            }
+                    CNProducto.Editar(Convert.ToInt32(this.txtidproducto.Text),
+                        this.txtcodigo.Text,
+                        this.txtnombre.Text,
+                        this.txtdescripcion.Text,
+                        this.dtfechaingreso.Value,
+                        this.dtfechavencimiento.Value,
+                        Convert.ToDouble(txtpreciocompra.Text),
+                        Convert.ToDouble(txtprecioventa.Text),
+                        Convert.ToInt32(txtcantidad.Text),
+                        estado,
+                        Convert.ToInt32(this.cboidcategoria.SelectedValue));
+                        MessageBox.Show("Producto actualizado correctamente", "Sistema de Ventas",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
 
             this.Insert = false;
             this.Edit = false;
+            
             FrmListadoProducto form = new FrmListadoProducto();
             form.Show();
             this.Hide();

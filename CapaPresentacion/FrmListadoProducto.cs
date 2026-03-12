@@ -62,15 +62,11 @@ namespace CapaPresentacion
 
         private void btneditar_Click(object sender, EventArgs e)
         {
-            if (dlistado.CurrentRow == null || dlistado.CurrentRow.IsNewRow)
-            {
-                MessageBox.Show("Seleccione un registro válido para editar.",
-                    "Sistema de Ventas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
             FrmRegistrarProducto form = new FrmRegistrarProducto();
+
             form.Edit = true;
+            form.Insert = false;
+
             form.txtidproducto.Text = this.dlistado.CurrentRow.Cells["idproducto"].Value.ToString();
             form.txtcodigo.Text = this.dlistado.CurrentRow.Cells["codigo"].Value.ToString();
             form.txtnombre.Text = this.dlistado.CurrentRow.Cells["nombre"].Value.ToString();
@@ -99,34 +95,30 @@ namespace CapaPresentacion
 
         private void btneliminar_Click(object sender, EventArgs e)
         {
-            if (dlistado.CurrentRow == null || dlistado.CurrentRow.IsNewRow)
-            {
-                MessageBox.Show("Seleccione un registro válido para editar.",
-                    "Sistema de Ventas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
             try
             {
                 DialogResult opcion = MessageBox.Show(
                     "¿Realmente desea eliminar el(los) registro(s)?",
                     "Sistema de Ventas",
                     MessageBoxButtons.OKCancel,
-                    MessageBoxIcon.Question
-                );
+                    MessageBoxIcon.Question);
 
-                if (dlistado.SelectedRows.Count > 0 && opcion == DialogResult.OK)
+                if (dlistado.SelectedRows.Count > 0)
                 {
-                    string idproducto = dlistado.CurrentRow.Cells["idproducto"].Value.ToString();
-                    CNProducto.Eliminar(Convert.ToInt32(idproducto));
+                    if (opcion == DialogResult.OK)
+                    {
+                        string idproducto = dlistado.CurrentRow.Cells["idproducto"].Value.ToString();
+                        CNProducto.Eliminar(Convert.ToInt32(idproducto));
 
-                    MessageBox.Show("Registro eliminado",
-                        "Sistema de Ventas",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
+                        MessageBox.Show("Registro eliminado",
+                            "Sistema de Ventas",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
 
-                    Mostrar();
+                        Mostrar();
+                    }
                 }
+                Mostrar();
             }
             catch (Exception ex)
             {
@@ -137,8 +129,8 @@ namespace CapaPresentacion
         private void btnnuevo_Click_1(object sender, EventArgs e)
         {
             FrmRegistrarProducto form = new FrmRegistrarProducto();
-            form.Insert = true;
             form.Show();
+            form.Insert = true;
             this.Hide();
         }
 

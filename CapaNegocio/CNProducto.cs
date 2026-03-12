@@ -22,7 +22,7 @@ namespace CapaNegocio
             return CDCategoria.ListarCategorias();
         }
 
-        public string Guardar(string codigo, string nombre, string descripcion, DateTime fingreso, DateTime fvencimiento, double pcompra, double pventa, int stock, string estado, int idcategoria)
+        public static string Guardar(string codigo, string nombre, string descripcion, DateTime fingreso, DateTime fvencimiento, double pcompra, double pventa, int stock, string estado, int idcategoria)
             {
                 CDProducto Datos = new CDProducto();
                 Datos.Codigo = codigo;
