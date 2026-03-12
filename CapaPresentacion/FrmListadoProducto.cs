@@ -71,15 +71,16 @@ namespace CapaPresentacion
 
             FrmRegistrarProducto form = new FrmRegistrarProducto();
 
+            form.txtidproducto.Text = this.dlistado.CurrentRow.Cells["idproducto"].Value.ToString();
             form.txtcodigo.Text = this.dlistado.CurrentRow.Cells["codigo"].Value.ToString();
             form.txtnombre.Text = this.dlistado.CurrentRow.Cells["nombre"].Value.ToString();
             form.txtprecioventa.Text = this.dlistado.CurrentRow.Cells["precio_venta"].Value.ToString();
             form.txtpreciocompra.Text = this.dlistado.CurrentRow.Cells["precio_compra"].Value.ToString();
             form.txtdescripcion.Text = this.dlistado.CurrentRow.Cells["descripcion"].Value.ToString();
-            form.cboidcategoria.SelectedValue = this.dlistado.CurrentRow.Cells["idcategoria"].Value;
+            form.cboidcategoria.Text = this.dlistado.CurrentRow.Cells["idcategoria"].Value.ToString();
             form.dtfechaingreso.Value = Convert.ToDateTime(this.dlistado.CurrentRow.Cells["f_ingreso"].Value);
             form.dtfechavencimiento.Value = Convert.ToDateTime(this.dlistado.CurrentRow.Cells["f_vencimiento"].Value);
-            form.txtcantidad.Text = this.dlistado.CurrentRow.Cells["cantidad"].Value.ToString();
+            form.txtcantidad.Text = this.dlistado.CurrentRow.Cells["stock"].Value.ToString();
 
             string estado = this.dlistado.CurrentRow.Cells["estado"].Value.ToString();
 

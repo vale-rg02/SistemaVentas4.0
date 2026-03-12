@@ -28,11 +28,6 @@ namespace CapaPresentacion
             this.Left = 0;
 
             this.CargarCategoria();
-            
-            if (this.Insert == false && this.Edit == false)
-            {
-                this.Insert = true;
-            }
 
         }
         private void CargarCategoria()
