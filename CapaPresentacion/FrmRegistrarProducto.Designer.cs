@@ -306,6 +306,7 @@
             this.Name = "FrmRegistrarProducto";
             this.Text = "FrmRegistrarProducto";
             this.Load += new System.EventHandler(this.FrmRegistrarProducto_Load);
+            this.Shown += new System.EventHandler(this.FrmRegistrarProducto_Shown_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

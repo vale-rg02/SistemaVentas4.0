@@ -70,7 +70,7 @@ namespace CapaPresentacion
             }
 
             FrmRegistrarProducto form = new FrmRegistrarProducto();
-            form.Edit = true;   
+            form.Edit = true;
             form.txtidproducto.Text = this.dlistado.CurrentRow.Cells["idproducto"].Value.ToString();
             form.txtcodigo.Text = this.dlistado.CurrentRow.Cells["codigo"].Value.ToString();
             form.txtnombre.Text = this.dlistado.CurrentRow.Cells["nombre"].Value.ToString();

@@ -29,13 +29,7 @@ namespace CapaPresentacion
 
             this.CargarCategoria();
         }
-        private void FrmRegistrarProducto_Shown(object sender, EventArgs e)
-        {
-            if (this.Insert == false && this.Edit == false)
-            {
-                this.Insert = true;
-            }
-        }
+
 
         private void CargarCategoria()
         {
@@ -139,6 +133,14 @@ namespace CapaPresentacion
             FrmListadoProducto form = new FrmListadoProducto();
             form.Show();
             this.Hide();
+        }
+
+        private void FrmRegistrarProducto_Shown_1(object sender, EventArgs e)
+        {
+            if (this.Insert == false && this.Edit == false)
+            {
+                this.Insert = true;
+            }
         }
     }
 }
