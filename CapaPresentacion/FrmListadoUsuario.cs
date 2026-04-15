@@ -72,32 +72,19 @@ namespace CapaPresentacion
 
         private void btneditar_Click(object sender, EventArgs e)
         {
-            // Validar que exista una fila "actual" seleccionada y que no sea la fila de nuevo registro
-            if (dlistado.CurrentRow == null || dlistado.CurrentRow.IsNewRow)
-            {
-                MessageBox.Show("Seleccione una fila válida antes de editar.",
-                    "Sistema de ventas",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
-                return;
-            }
-
-            var row = dlistado.CurrentRow;
-
             FrmRegistrarUsuario form = new FrmRegistrarUsuario();
             form.Edit = true;
             form.Insert = false;
 
-            // Usar Convert.ToString para evitar NullReferenceException si Value es null
-            form.txtidusuario.Text = Convert.ToString(row.Cells["idusuario"].Value);
-            form.txtidempleado.Text = Convert.ToString(row.Cells["idempleado"].Value);
-            form.txtnombre.Text = Convert.ToString(row.Cells["nombre"].Value);
-            form.txtapellidos.Text = Convert.ToString(row.Cells["apellidos"].Value);
-            form.txtusuario.Text = Convert.ToString(row.Cells["usuario"].Value);
-            form.txtpassword.Text = Convert.ToString(row.Cells["pass"].Value);
-            form.cboacceso.Text = Convert.ToString(row.Cells["acceso"].Value);
+            form.txtidusuario.Text = dlistado.CurrentRow.Cells["idusuario"].Value.ToString();
+            form.txtidempleado.Text = dlistado.CurrentRow.Cells["idempleado"].Value.ToString();
+            form.txtnombre.Text = dlistado.CurrentRow.Cells["nombre"].Value.ToString();
+            form.txtapellidos.Text = dlistado.CurrentRow.Cells["apellidos"].Value.ToString();
+            form.txtusuario.Text = dlistado.CurrentRow.Cells["usuario"].Value.ToString();
+            form.txtpassword.Text = dlistado.CurrentRow.Cells["pass"].Value.ToString();
+            form.cboacceso.Text = dlistado.CurrentRow.Cells["acceso"].Value.ToString();
 
-            string estado = Convert.ToString(row.Cells["estado"].Value);
+            string estado = dlistado.CurrentRow.Cells["estado"].Value.ToString();
             if (estado == "ACTIVO")
             {
                 form.rbactivo.Checked = true;

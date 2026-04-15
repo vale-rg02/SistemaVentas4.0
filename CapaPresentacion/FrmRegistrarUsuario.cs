@@ -94,6 +94,11 @@ namespace CapaPresentacion
                 MessageBox.Show(Ex.Message + Ex.StackTrace);
             }
         }
+
+
+
+
+
         private void btncancelar_Click(object sender, EventArgs e)
         {
             FrmListadoUsuario form = new FrmListadoUsuario();
@@ -111,6 +116,7 @@ namespace CapaPresentacion
             {
                 txtidempleado.Text = Convert.ToString(form.dlistado.CurrentRow.Cells["idempleado"].Value);
             }
+
             txtnombre.Text = Convert.ToString(form.dlistado.CurrentRow.Cells["nombre"].Value);
             txtapellidos.Text = Convert.ToString(form.dlistado.CurrentRow.Cells["apellidos"].Value);
         }
