@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInicio));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnmaximizar = new System.Windows.Forms.PictureBox();
@@ -40,29 +41,30 @@
             this.btncategoria = new System.Windows.Forms.Button();
             this.btnproducto = new System.Windows.Forms.Button();
             this.btnalmacen = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.mnucompra = new System.Windows.Forms.Panel();
             this.btnproveedores = new System.Windows.Forms.Button();
             this.btngenerarcompra = new System.Windows.Forms.Button();
             this.btncompras = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.mnuventa = new System.Windows.Forms.Panel();
             this.btnclientes = new System.Windows.Forms.Button();
             this.btngenerarventa = new System.Windows.Forms.Button();
             this.btnventas = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.mnuconsultas = new System.Windows.Forms.Panel();
             this.btnstockminimo = new System.Windows.Forms.Button();
             this.btncomprafechas = new System.Windows.Forms.Button();
             this.btnventafecha = new System.Windows.Forms.Button();
             this.btnconsultas = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.mnuconfiguraciones = new System.Windows.Forms.Panel();
             this.btnusuarios = new System.Windows.Forms.Button();
             this.btnempleados = new System.Windows.Forms.Button();
             this.btnconfiguraciones = new System.Windows.Forms.Button();
             this.mnureportes = new System.Windows.Forms.Panel();
+            this.btnreporteempleado = new System.Windows.Forms.Button();
             this.btnreportecliente = new System.Windows.Forms.Button();
             this.btnreporteproducto = new System.Windows.Forms.Button();
             this.btnreportes = new System.Windows.Forms.Button();
-            this.btnreporteempleado = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.tmrsubmenu = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnrestaurar)).BeginInit();
@@ -71,10 +73,10 @@
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.mnualmacen.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
+            this.mnucompra.SuspendLayout();
+            this.mnuventa.SuspendLayout();
+            this.mnuconsultas.SuspendLayout();
+            this.mnuconfiguraciones.SuspendLayout();
             this.mnureportes.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -144,15 +146,15 @@
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.RoyalBlue;
             this.flowLayoutPanel1.Controls.Add(this.pictureBox1);
             this.flowLayoutPanel1.Controls.Add(this.mnualmacen);
-            this.flowLayoutPanel1.Controls.Add(this.panel3);
-            this.flowLayoutPanel1.Controls.Add(this.panel4);
-            this.flowLayoutPanel1.Controls.Add(this.panel5);
-            this.flowLayoutPanel1.Controls.Add(this.panel6);
+            this.flowLayoutPanel1.Controls.Add(this.mnucompra);
+            this.flowLayoutPanel1.Controls.Add(this.mnuventa);
+            this.flowLayoutPanel1.Controls.Add(this.mnuconsultas);
+            this.flowLayoutPanel1.Controls.Add(this.mnuconfiguraciones);
             this.flowLayoutPanel1.Controls.Add(this.mnureportes);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 100);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(207, 375);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(219, 433);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // pictureBox1
@@ -171,8 +173,10 @@
             this.mnualmacen.Controls.Add(this.btnproducto);
             this.mnualmacen.Controls.Add(this.btnalmacen);
             this.mnualmacen.Location = new System.Drawing.Point(3, 106);
+            this.mnualmacen.MaximumSize = new System.Drawing.Size(214, 120);
+            this.mnualmacen.MinimumSize = new System.Drawing.Size(214, 37);
             this.mnualmacen.Name = "mnualmacen";
-            this.mnualmacen.Size = new System.Drawing.Size(200, 34);
+            this.mnualmacen.Size = new System.Drawing.Size(214, 37);
             this.mnualmacen.TabIndex = 0;
             // 
             // btncategoria
@@ -188,6 +192,7 @@
             this.btncategoria.TabIndex = 2;
             this.btncategoria.Text = "Categoria";
             this.btncategoria.UseVisualStyleBackColor = false;
+            this.btncategoria.Click += new System.EventHandler(this.btncategoria_Click);
             // 
             // btnproducto
             // 
@@ -202,6 +207,7 @@
             this.btnproducto.TabIndex = 1;
             this.btnproducto.Text = "Producto";
             this.btnproducto.UseVisualStyleBackColor = false;
+            this.btnproducto.Click += new System.EventHandler(this.btnproducto_Click);
             // 
             // btnalmacen
             // 
@@ -218,16 +224,19 @@
             this.btnalmacen.TabIndex = 0;
             this.btnalmacen.Text = "Almacén";
             this.btnalmacen.UseVisualStyleBackColor = false;
+            this.btnalmacen.Click += new System.EventHandler(this.btnalmacen_Click);
             // 
-            // panel3
+            // mnucompra
             // 
-            this.panel3.Controls.Add(this.btnproveedores);
-            this.panel3.Controls.Add(this.btngenerarcompra);
-            this.panel3.Controls.Add(this.btncompras);
-            this.panel3.Location = new System.Drawing.Point(3, 146);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 34);
-            this.panel3.TabIndex = 3;
+            this.mnucompra.Controls.Add(this.btnproveedores);
+            this.mnucompra.Controls.Add(this.btngenerarcompra);
+            this.mnucompra.Controls.Add(this.btncompras);
+            this.mnucompra.Location = new System.Drawing.Point(3, 149);
+            this.mnucompra.MaximumSize = new System.Drawing.Size(214, 120);
+            this.mnucompra.MinimumSize = new System.Drawing.Size(214, 37);
+            this.mnucompra.Name = "mnucompra";
+            this.mnucompra.Size = new System.Drawing.Size(214, 37);
+            this.mnucompra.TabIndex = 3;
             // 
             // btnproveedores
             // 
@@ -242,6 +251,7 @@
             this.btnproveedores.TabIndex = 2;
             this.btnproveedores.Text = "Proveedores";
             this.btnproveedores.UseVisualStyleBackColor = false;
+            this.btnproveedores.Click += new System.EventHandler(this.btnproveedores_Click);
             // 
             // btngenerarcompra
             // 
@@ -256,6 +266,7 @@
             this.btngenerarcompra.TabIndex = 1;
             this.btngenerarcompra.Text = "Generar Compra";
             this.btngenerarcompra.UseVisualStyleBackColor = false;
+            this.btngenerarcompra.Click += new System.EventHandler(this.btngenerarcompra_Click);
             // 
             // btncompras
             // 
@@ -272,16 +283,19 @@
             this.btncompras.TabIndex = 0;
             this.btncompras.Text = "Compras";
             this.btncompras.UseVisualStyleBackColor = false;
+            this.btncompras.Click += new System.EventHandler(this.btncompras_Click);
             // 
-            // panel4
+            // mnuventa
             // 
-            this.panel4.Controls.Add(this.btnclientes);
-            this.panel4.Controls.Add(this.btngenerarventa);
-            this.panel4.Controls.Add(this.btnventas);
-            this.panel4.Location = new System.Drawing.Point(3, 186);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 34);
-            this.panel4.TabIndex = 4;
+            this.mnuventa.Controls.Add(this.btnclientes);
+            this.mnuventa.Controls.Add(this.btngenerarventa);
+            this.mnuventa.Controls.Add(this.btnventas);
+            this.mnuventa.Location = new System.Drawing.Point(3, 192);
+            this.mnuventa.MaximumSize = new System.Drawing.Size(214, 120);
+            this.mnuventa.MinimumSize = new System.Drawing.Size(214, 37);
+            this.mnuventa.Name = "mnuventa";
+            this.mnuventa.Size = new System.Drawing.Size(214, 37);
+            this.mnuventa.TabIndex = 4;
             // 
             // btnclientes
             // 
@@ -296,6 +310,7 @@
             this.btnclientes.TabIndex = 2;
             this.btnclientes.Text = "Clientes";
             this.btnclientes.UseVisualStyleBackColor = false;
+            this.btnclientes.Click += new System.EventHandler(this.btnclientes_Click);
             // 
             // btngenerarventa
             // 
@@ -310,6 +325,7 @@
             this.btngenerarventa.TabIndex = 1;
             this.btngenerarventa.Text = "Generar venta";
             this.btngenerarventa.UseVisualStyleBackColor = false;
+            this.btngenerarventa.Click += new System.EventHandler(this.btngenerarventa_Click);
             // 
             // btnventas
             // 
@@ -326,18 +342,20 @@
             this.btnventas.TabIndex = 0;
             this.btnventas.Text = "Ventas";
             this.btnventas.UseVisualStyleBackColor = false;
+            this.btnventas.Click += new System.EventHandler(this.btnventas_Click);
             // 
-            // panel5
+            // mnuconsultas
             // 
-            this.panel5.Controls.Add(this.btnstockminimo);
-            this.panel5.Controls.Add(this.btncomprafechas);
-            this.panel5.Controls.Add(this.btnventafecha);
-            this.panel5.Controls.Add(this.btnconsultas);
-            this.panel5.Location = new System.Drawing.Point(3, 226);
-            this.panel5.MaximumSize = new System.Drawing.Size(214, 160);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(200, 35);
-            this.panel5.TabIndex = 5;
+            this.mnuconsultas.Controls.Add(this.btnstockminimo);
+            this.mnuconsultas.Controls.Add(this.btncomprafechas);
+            this.mnuconsultas.Controls.Add(this.btnventafecha);
+            this.mnuconsultas.Controls.Add(this.btnconsultas);
+            this.mnuconsultas.Location = new System.Drawing.Point(3, 235);
+            this.mnuconsultas.MaximumSize = new System.Drawing.Size(214, 160);
+            this.mnuconsultas.MinimumSize = new System.Drawing.Size(214, 37);
+            this.mnuconsultas.Name = "mnuconsultas";
+            this.mnuconsultas.Size = new System.Drawing.Size(214, 37);
+            this.mnuconsultas.TabIndex = 5;
             // 
             // btnstockminimo
             // 
@@ -352,6 +370,7 @@
             this.btnstockminimo.TabIndex = 3;
             this.btnstockminimo.Text = "Stock minimo";
             this.btnstockminimo.UseVisualStyleBackColor = false;
+            this.btnstockminimo.Click += new System.EventHandler(this.btnstockminimo_Click);
             // 
             // btncomprafechas
             // 
@@ -366,6 +385,7 @@
             this.btncomprafechas.TabIndex = 2;
             this.btncomprafechas.Text = "Compras por fecha";
             this.btncomprafechas.UseVisualStyleBackColor = false;
+            this.btncomprafechas.Click += new System.EventHandler(this.btncomprafechas_Click);
             // 
             // btnventafecha
             // 
@@ -380,6 +400,7 @@
             this.btnventafecha.TabIndex = 1;
             this.btnventafecha.Text = "Ventas por fecha";
             this.btnventafecha.UseVisualStyleBackColor = false;
+            this.btnventafecha.Click += new System.EventHandler(this.btnventafecha_Click);
             // 
             // btnconsultas
             // 
@@ -396,25 +417,19 @@
             this.btnconsultas.TabIndex = 0;
             this.btnconsultas.Text = "Consultas";
             this.btnconsultas.UseVisualStyleBackColor = false;
+            this.btnconsultas.Click += new System.EventHandler(this.btnconsultas_Click);
             // 
-            // panel2
+            // mnuconfiguraciones
             // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(207, 100);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(593, 100);
-            this.panel2.TabIndex = 2;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.btnusuarios);
-            this.panel6.Controls.Add(this.btnempleados);
-            this.panel6.Controls.Add(this.btnconfiguraciones);
-            this.panel6.Location = new System.Drawing.Point(3, 267);
-            this.panel6.MaximumSize = new System.Drawing.Size(214, 120);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(200, 35);
-            this.panel6.TabIndex = 6;
+            this.mnuconfiguraciones.Controls.Add(this.btnusuarios);
+            this.mnuconfiguraciones.Controls.Add(this.btnempleados);
+            this.mnuconfiguraciones.Controls.Add(this.btnconfiguraciones);
+            this.mnuconfiguraciones.Location = new System.Drawing.Point(3, 278);
+            this.mnuconfiguraciones.MaximumSize = new System.Drawing.Size(214, 120);
+            this.mnuconfiguraciones.MinimumSize = new System.Drawing.Size(214, 37);
+            this.mnuconfiguraciones.Name = "mnuconfiguraciones";
+            this.mnuconfiguraciones.Size = new System.Drawing.Size(214, 37);
+            this.mnuconfiguraciones.TabIndex = 6;
             // 
             // btnusuarios
             // 
@@ -429,6 +444,7 @@
             this.btnusuarios.TabIndex = 2;
             this.btnusuarios.Text = "Usuarios";
             this.btnusuarios.UseVisualStyleBackColor = false;
+            this.btnusuarios.Click += new System.EventHandler(this.btnusuarios_Click);
             // 
             // btnempleados
             // 
@@ -443,6 +459,7 @@
             this.btnempleados.TabIndex = 1;
             this.btnempleados.Text = "Empleados";
             this.btnempleados.UseVisualStyleBackColor = false;
+            this.btnempleados.Click += new System.EventHandler(this.btnempleados_Click);
             // 
             // btnconfiguraciones
             // 
@@ -459,6 +476,7 @@
             this.btnconfiguraciones.TabIndex = 0;
             this.btnconfiguraciones.Text = "Configuraciones";
             this.btnconfiguraciones.UseVisualStyleBackColor = false;
+            this.btnconfiguraciones.Click += new System.EventHandler(this.btnconfiguraciones_Click);
             // 
             // mnureportes
             // 
@@ -466,11 +484,26 @@
             this.mnureportes.Controls.Add(this.btnreportecliente);
             this.mnureportes.Controls.Add(this.btnreporteproducto);
             this.mnureportes.Controls.Add(this.btnreportes);
-            this.mnureportes.Location = new System.Drawing.Point(3, 308);
+            this.mnureportes.Location = new System.Drawing.Point(3, 321);
             this.mnureportes.MaximumSize = new System.Drawing.Size(214, 160);
+            this.mnureportes.MinimumSize = new System.Drawing.Size(214, 37);
             this.mnureportes.Name = "mnureportes";
-            this.mnureportes.Size = new System.Drawing.Size(200, 35);
+            this.mnureportes.Size = new System.Drawing.Size(214, 37);
             this.mnureportes.TabIndex = 7;
+            // 
+            // btnreporteempleado
+            // 
+            this.btnreporteempleado.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnreporteempleado.FlatAppearance.BorderSize = 0;
+            this.btnreporteempleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnreporteempleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnreporteempleado.ForeColor = System.Drawing.Color.White;
+            this.btnreporteempleado.Location = new System.Drawing.Point(37, 100);
+            this.btnreporteempleado.Name = "btnreporteempleado";
+            this.btnreporteempleado.Size = new System.Drawing.Size(160, 28);
+            this.btnreporteempleado.TabIndex = 3;
+            this.btnreporteempleado.Text = "Empleados";
+            this.btnreporteempleado.UseVisualStyleBackColor = false;
             // 
             // btnreportecliente
             // 
@@ -485,6 +518,7 @@
             this.btnreportecliente.TabIndex = 2;
             this.btnreportecliente.Text = "Clientes";
             this.btnreportecliente.UseVisualStyleBackColor = false;
+            this.btnreportecliente.Click += new System.EventHandler(this.btnreportecliente_Click);
             // 
             // btnreporteproducto
             // 
@@ -499,6 +533,7 @@
             this.btnreporteproducto.TabIndex = 1;
             this.btnreporteproducto.Text = "Productos";
             this.btnreporteproducto.UseVisualStyleBackColor = false;
+            this.btnreporteproducto.Click += new System.EventHandler(this.btnreporteproducto_Click);
             // 
             // btnreportes
             // 
@@ -515,26 +550,26 @@
             this.btnreportes.TabIndex = 0;
             this.btnreportes.Text = "Reportes";
             this.btnreportes.UseVisualStyleBackColor = false;
+            this.btnreportes.Click += new System.EventHandler(this.btnreportes_Click);
             // 
-            // btnreporteempleado
+            // panel2
             // 
-            this.btnreporteempleado.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnreporteempleado.FlatAppearance.BorderSize = 0;
-            this.btnreporteempleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnreporteempleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnreporteempleado.ForeColor = System.Drawing.Color.White;
-            this.btnreporteempleado.Location = new System.Drawing.Point(37, 100);
-            this.btnreporteempleado.Name = "btnreporteempleado";
-            this.btnreporteempleado.Size = new System.Drawing.Size(160, 28);
-            this.btnreporteempleado.TabIndex = 3;
-            this.btnreporteempleado.Text = "Empleados";
-            this.btnreporteempleado.UseVisualStyleBackColor = false;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(219, 100);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(581, 100);
+            this.panel2.TabIndex = 2;
+            // 
+            // tmrsubmenu
+            // 
+            this.tmrsubmenu.Interval = 10;
+            this.tmrsubmenu.Tick += new System.EventHandler(this.tmrsubmenu_Tick);
             // 
             // FrmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 475);
+            this.ClientSize = new System.Drawing.Size(800, 533);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
@@ -550,10 +585,10 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.mnualmacen.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
+            this.mnucompra.ResumeLayout(false);
+            this.mnuventa.ResumeLayout(false);
+            this.mnuconsultas.ResumeLayout(false);
+            this.mnuconfiguraciones.ResumeLayout(false);
             this.mnureportes.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -573,20 +608,20 @@
         private System.Windows.Forms.Button btncategoria;
         private System.Windows.Forms.Button btnproducto;
         private System.Windows.Forms.Button btnalmacen;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel mnucompra;
         private System.Windows.Forms.Button btnproveedores;
         private System.Windows.Forms.Button btngenerarcompra;
         private System.Windows.Forms.Button btncompras;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel mnuventa;
         private System.Windows.Forms.Button btnclientes;
         private System.Windows.Forms.Button btngenerarventa;
         private System.Windows.Forms.Button btnventas;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel mnuconsultas;
         private System.Windows.Forms.Button btnstockminimo;
         private System.Windows.Forms.Button btncomprafechas;
         private System.Windows.Forms.Button btnventafecha;
         private System.Windows.Forms.Button btnconsultas;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel mnuconfiguraciones;
         private System.Windows.Forms.Button btnusuarios;
         private System.Windows.Forms.Button btnempleados;
         private System.Windows.Forms.Button btnconfiguraciones;
@@ -595,5 +630,6 @@
         private System.Windows.Forms.Button btnreporteproducto;
         private System.Windows.Forms.Button btnreportes;
         private System.Windows.Forms.Button btnreporteempleado;
+        private System.Windows.Forms.Timer tmrsubmenu;
     }
 }
