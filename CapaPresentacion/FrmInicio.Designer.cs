@@ -251,7 +251,7 @@
             this.btnproveedores.TabIndex = 2;
             this.btnproveedores.Text = "Proveedores";
             this.btnproveedores.UseVisualStyleBackColor = false;
-            this.btnproveedores.Click += new System.EventHandler(this.btnproveedores_Click);
+            this.btnproveedores.Click += new System.EventHandler(this.btnproveedor_Click);
             // 
             // btngenerarcompra
             // 
@@ -266,7 +266,7 @@
             this.btngenerarcompra.TabIndex = 1;
             this.btngenerarcompra.Text = "Generar Compra";
             this.btngenerarcompra.UseVisualStyleBackColor = false;
-            this.btngenerarcompra.Click += new System.EventHandler(this.btngenerarcompra_Click);
+            this.btngenerarcompra.Click += new System.EventHandler(this.btncompras_Click);
             // 
             // btncompras
             // 
@@ -325,7 +325,7 @@
             this.btngenerarventa.TabIndex = 1;
             this.btngenerarventa.Text = "Generar venta";
             this.btngenerarventa.UseVisualStyleBackColor = false;
-            this.btngenerarventa.Click += new System.EventHandler(this.btngenerarventa_Click);
+            this.btngenerarventa.Click += new System.EventHandler(this.btnventas_Click);
             // 
             // btnventas
             // 
@@ -370,7 +370,7 @@
             this.btnstockminimo.TabIndex = 3;
             this.btnstockminimo.Text = "Stock minimo";
             this.btnstockminimo.UseVisualStyleBackColor = false;
-            this.btnstockminimo.Click += new System.EventHandler(this.btnstockminimo_Click);
+            this.btnstockminimo.Click += new System.EventHandler(this.btnconsultas_Click);
             // 
             // btncomprafechas
             // 
@@ -385,7 +385,7 @@
             this.btncomprafechas.TabIndex = 2;
             this.btncomprafechas.Text = "Compras por fecha";
             this.btncomprafechas.UseVisualStyleBackColor = false;
-            this.btncomprafechas.Click += new System.EventHandler(this.btncomprafechas_Click);
+            this.btncomprafechas.Click += new System.EventHandler(this.btncompras_Click);
             // 
             // btnventafecha
             // 
@@ -400,7 +400,7 @@
             this.btnventafecha.TabIndex = 1;
             this.btnventafecha.Text = "Ventas por fecha";
             this.btnventafecha.UseVisualStyleBackColor = false;
-            this.btnventafecha.Click += new System.EventHandler(this.btnventafecha_Click);
+            this.btnventafecha.Click += new System.EventHandler(this.btnventas_Click);
             // 
             // btnconsultas
             // 
@@ -518,7 +518,7 @@
             this.btnreportecliente.TabIndex = 2;
             this.btnreportecliente.Text = "Clientes";
             this.btnreportecliente.UseVisualStyleBackColor = false;
-            this.btnreportecliente.Click += new System.EventHandler(this.btnreportecliente_Click);
+            this.btnreportecliente.Click += new System.EventHandler(this.btnreportes_Click);
             // 
             // btnreporteproducto
             // 
@@ -533,7 +533,7 @@
             this.btnreporteproducto.TabIndex = 1;
             this.btnreporteproducto.Text = "Productos";
             this.btnreporteproducto.UseVisualStyleBackColor = false;
-            this.btnreporteproducto.Click += new System.EventHandler(this.btnreporteproducto_Click);
+            this.btnreporteproducto.Click += new System.EventHandler(this.btnreportes_Click);
             // 
             // btnreportes
             // 

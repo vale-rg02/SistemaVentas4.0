@@ -221,7 +221,6 @@ namespace CapaPresentacion
             tmrsubmenu.Start();
         }
 
-
         private void btnproducto_Click(object sender, EventArgs e)
         {
             FrmListadoProducto frm = new FrmListadoProducto();
