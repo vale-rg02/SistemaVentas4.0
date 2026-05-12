@@ -287,5 +287,44 @@ namespace CapaPresentacion
             mnuconfiguraciones.Height = 37;
         }
 
+        private void btngenerarcompra_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btngenerarventa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnventafecha_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btncomprafechas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnstockminimo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnreporteproducto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnreportecliente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnreporteempleado_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
