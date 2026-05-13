@@ -1,4 +1,6 @@
-﻿namespace CapaPresentacion
+﻿using System;
+
+namespace CapaPresentacion
 {
     partial class FrmInicio
     {
@@ -35,6 +37,8 @@
             this.btnrestaurar = new System.Windows.Forms.PictureBox();
             this.btncerrar = new System.Windows.Forms.PictureBox();
             this.btnminimizar = new System.Windows.Forms.PictureBox();
+            this.lblIconoUsuario = new System.Windows.Forms.Label();
+            this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mnualmacen = new System.Windows.Forms.Panel();
@@ -64,19 +68,20 @@
             this.btnreporteproducto = new System.Windows.Forms.Button();
             this.btnreportes = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.tmrsubmenu = new System.Windows.Forms.Timer(this.components);
-            this.btncliente = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnproductos = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnventa = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btncompra = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnempleado = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.btnstockminn = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnempleado = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btncompra = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnventa = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnproductos = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btncliente = new System.Windows.Forms.Button();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.tmrsubmenu = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnrestaurar)).BeginInit();
@@ -100,6 +105,8 @@
             this.panel1.Controls.Add(this.btnrestaurar);
             this.panel1.Controls.Add(this.btncerrar);
             this.panel1.Controls.Add(this.btnminimizar);
+            this.panel1.Controls.Add(this.lblIconoUsuario);
+            this.panel1.Controls.Add(this.lblNombreUsuario);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
@@ -158,6 +165,29 @@
             this.btnminimizar.TabIndex = 0;
             this.btnminimizar.TabStop = false;
             this.btnminimizar.Click += new System.EventHandler(this.btnminimizar_Click);
+            // 
+            // lblIconoUsuario
+            // 
+            this.lblIconoUsuario.AutoSize = true;
+            this.lblIconoUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.lblIconoUsuario.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.lblIconoUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblIconoUsuario.Location = new System.Drawing.Point(761, 54);
+            this.lblIconoUsuario.Name = "lblIconoUsuario";
+            this.lblIconoUsuario.Size = new System.Drawing.Size(33, 25);
+            this.lblIconoUsuario.TabIndex = 4;
+            this.lblIconoUsuario.Text = "👤";
+            // 
+            // lblNombreUsuario
+            // 
+            this.lblNombreUsuario.AutoSize = true;
+            this.lblNombreUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.lblNombreUsuario.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblNombreUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblNombreUsuario.Location = new System.Drawing.Point(789, 59);
+            this.lblNombreUsuario.Name = "lblNombreUsuario";
+            this.lblNombreUsuario.Size = new System.Drawing.Size(0, 19);
+            this.lblNombreUsuario.TabIndex = 5;
             // 
             // flowLayoutPanel1
             // 
@@ -613,6 +643,7 @@
             this.panel2.Controls.Add(this.btnproductos);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.btncliente);
+            this.panel2.Controls.Add(this.btnCerrarSesion);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(164, 81);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
@@ -620,90 +651,24 @@
             this.panel2.Size = new System.Drawing.Size(752, 81);
             this.panel2.TabIndex = 2;
             // 
-            // tmrsubmenu
+            // label6
             // 
-            this.tmrsubmenu.Interval = 10;
-            this.tmrsubmenu.Tick += new System.EventHandler(this.tmrsubmenu_Tick);
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(431, 65);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(55, 13);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Stock Min";
             // 
-            // btncliente
+            // btnstockminn
             // 
-            this.btncliente.BackColor = System.Drawing.SystemColors.Control;
-            this.btncliente.Image = ((System.Drawing.Image)(resources.GetObject("btncliente.Image")));
-            this.btncliente.Location = new System.Drawing.Point(14, 2);
-            this.btncliente.Name = "btncliente";
-            this.btncliente.Size = new System.Drawing.Size(75, 62);
-            this.btncliente.TabIndex = 0;
-            this.btncliente.UseVisualStyleBackColor = false;
-            this.btncliente.Click += new System.EventHandler(this.btncliente_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 65);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Clientes";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(105, 65);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Productos";
-            // 
-            // btnproductos
-            // 
-            this.btnproductos.BackColor = System.Drawing.SystemColors.Control;
-            this.btnproductos.Image = ((System.Drawing.Image)(resources.GetObject("btnproductos.Image")));
-            this.btnproductos.Location = new System.Drawing.Point(95, 2);
-            this.btnproductos.Name = "btnproductos";
-            this.btnproductos.Size = new System.Drawing.Size(75, 62);
-            this.btnproductos.TabIndex = 2;
-            this.btnproductos.UseVisualStyleBackColor = false;
-            this.btnproductos.Click += new System.EventHandler(this.btnproducto_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(194, 65);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Ventas";
-            // 
-            // btnventa
-            // 
-            this.btnventa.BackColor = System.Drawing.SystemColors.Control;
-            this.btnventa.Image = ((System.Drawing.Image)(resources.GetObject("btnventa.Image")));
-            this.btnventa.Location = new System.Drawing.Point(176, 2);
-            this.btnventa.Name = "btnventa";
-            this.btnventa.Size = new System.Drawing.Size(75, 62);
-            this.btnventa.TabIndex = 4;
-            this.btnventa.UseVisualStyleBackColor = false;
-            this.btnventa.Click += new System.EventHandler(this.btnventas_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(272, 65);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Compras";
-            // 
-            // btncompra
-            // 
-            this.btncompra.BackColor = System.Drawing.SystemColors.Control;
-            this.btncompra.Image = ((System.Drawing.Image)(resources.GetObject("btncompra.Image")));
-            this.btncompra.Location = new System.Drawing.Point(257, 2);
-            this.btncompra.Name = "btncompra";
-            this.btncompra.Size = new System.Drawing.Size(75, 62);
-            this.btncompra.TabIndex = 6;
-            this.btncompra.UseVisualStyleBackColor = false;
-            this.btncompra.Click += new System.EventHandler(this.btncompras_Click);
+            this.btnstockminn.BackColor = System.Drawing.SystemColors.Control;
+            this.btnstockminn.Image = ((System.Drawing.Image)(resources.GetObject("btnstockminn.Image")));
+            this.btnstockminn.Location = new System.Drawing.Point(420, 2);
+            this.btnstockminn.Name = "btnstockminn";
+            this.btnstockminn.Size = new System.Drawing.Size(75, 62);
+            this.btnstockminn.TabIndex = 10;
+            this.btnstockminn.UseVisualStyleBackColor = false;
             // 
             // label5
             // 
@@ -725,24 +690,111 @@
             this.btnempleado.UseVisualStyleBackColor = false;
             this.btnempleado.Click += new System.EventHandler(this.btnempleados_Click);
             // 
-            // label6
+            // label4
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(431, 65);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Stock Min";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(272, 65);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(48, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Compras";
             // 
-            // btnstockminn
+            // btncompra
             // 
-            this.btnstockminn.BackColor = System.Drawing.SystemColors.Control;
-            this.btnstockminn.Image = ((System.Drawing.Image)(resources.GetObject("btnstockminn.Image")));
-            this.btnstockminn.Location = new System.Drawing.Point(420, 2);
-            this.btnstockminn.Name = "btnstockminn";
-            this.btnstockminn.Size = new System.Drawing.Size(75, 62);
-            this.btnstockminn.TabIndex = 10;
-            this.btnstockminn.UseVisualStyleBackColor = false;
+            this.btncompra.BackColor = System.Drawing.SystemColors.Control;
+            this.btncompra.Image = ((System.Drawing.Image)(resources.GetObject("btncompra.Image")));
+            this.btncompra.Location = new System.Drawing.Point(257, 2);
+            this.btncompra.Name = "btncompra";
+            this.btncompra.Size = new System.Drawing.Size(75, 62);
+            this.btncompra.TabIndex = 6;
+            this.btncompra.UseVisualStyleBackColor = false;
+            this.btncompra.Click += new System.EventHandler(this.btncompras_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(194, 65);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Ventas";
+            // 
+            // btnventa
+            // 
+            this.btnventa.BackColor = System.Drawing.SystemColors.Control;
+            this.btnventa.Image = ((System.Drawing.Image)(resources.GetObject("btnventa.Image")));
+            this.btnventa.Location = new System.Drawing.Point(176, 2);
+            this.btnventa.Name = "btnventa";
+            this.btnventa.Size = new System.Drawing.Size(75, 62);
+            this.btnventa.TabIndex = 4;
+            this.btnventa.UseVisualStyleBackColor = false;
+            this.btnventa.Click += new System.EventHandler(this.btnventas_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(105, 65);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Productos";
+            // 
+            // btnproductos
+            // 
+            this.btnproductos.BackColor = System.Drawing.SystemColors.Control;
+            this.btnproductos.Image = ((System.Drawing.Image)(resources.GetObject("btnproductos.Image")));
+            this.btnproductos.Location = new System.Drawing.Point(95, 2);
+            this.btnproductos.Name = "btnproductos";
+            this.btnproductos.Size = new System.Drawing.Size(75, 62);
+            this.btnproductos.TabIndex = 2;
+            this.btnproductos.UseVisualStyleBackColor = false;
+            this.btnproductos.Click += new System.EventHandler(this.btnproducto_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(30, 65);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Clientes";
+            // 
+            // btncliente
+            // 
+            this.btncliente.BackColor = System.Drawing.SystemColors.Control;
+            this.btncliente.Image = ((System.Drawing.Image)(resources.GetObject("btncliente.Image")));
+            this.btncliente.Location = new System.Drawing.Point(14, 2);
+            this.btncliente.Name = "btncliente";
+            this.btncliente.Size = new System.Drawing.Size(75, 62);
+            this.btncliente.TabIndex = 0;
+            this.btncliente.UseVisualStyleBackColor = false;
+            this.btncliente.Click += new System.EventHandler(this.btncliente_Click);
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarSesion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnCerrarSesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.Image")));
+            this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(629, 5);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(120, 34);
+            this.btnCerrarSesion.TabIndex = 12;
+            this.btnCerrarSesion.Text = "  Cerrar Sesión";
+            this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            this.btnCerrarSesion.MouseEnter += new System.EventHandler(this.btnCerrarSesion_MouseEnter);
+            this.btnCerrarSesion.MouseLeave += new System.EventHandler(this.btnCerrarSesion_MouseLeave);
+            // 
+            // tmrsubmenu
+            // 
+            this.tmrsubmenu.Interval = 10;
+            this.tmrsubmenu.Tick += new System.EventHandler(this.tmrsubmenu_Tick);
             // 
             // FrmInicio
             // 
@@ -758,6 +810,7 @@
             this.Name = "FrmInicio";
             this.Text = "FrmInicio";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnmaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnrestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btncerrar)).EndInit();
@@ -776,6 +829,17 @@
 
         }
 
+        private void btnCerrarSesion_MouseEnter(object sender, EventArgs e)
+        {
+            btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(200, 30, 30);
+            btnCerrarSesion.ForeColor = System.Drawing.Color.White;
+        }
+
+        private void btnCerrarSesion_MouseLeave(object sender, EventArgs e)
+        {
+            btnCerrarSesion.BackColor = System.Drawing.Color.White;
+            btnCerrarSesion.ForeColor = System.Drawing.Color.FromArgb(200, 30, 30);
+        }
         #endregion
 
         private System.Windows.Forms.Panel panel1;
@@ -825,5 +889,8 @@
         private System.Windows.Forms.Button btnstockminn;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnempleado;
+        private System.Windows.Forms.Label lblIconoUsuario;
+        private System.Windows.Forms.Label lblNombreUsuario;
+        private System.Windows.Forms.Button btnCerrarSesion;
     }
 }

@@ -23,8 +23,33 @@ namespace CapaPresentacion
         public FrmInicio()
         {
             InitializeComponent();
+            CargarUsuarioActivo();
             MaximizedBounds = Screen.PrimaryScreen.WorkingArea;
         }
+
+        private void CargarUsuarioActivo()
+        {
+            lblNombreUsuario.Text = CapaDatos.SesionActual.NombreEmpleado;
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            DialogResult resp = MessageBox.Show(
+                "¿Deseas cerrar la sesión actual?",
+                "Cerrar Sesión",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (resp == DialogResult.Yes)
+            {
+                CapaDatos.SesionActual.Limpiar();
+                FrmLogin frmLogin = new FrmLogin();
+                frmLogin.Show();
+                this.Close();
+            }
+        }
+
+
 
         private void btncerrar_Click(object sender, EventArgs e)
         {
