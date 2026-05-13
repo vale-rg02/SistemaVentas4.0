@@ -202,5 +202,36 @@ namespace CapaDatos
             }
             return resul;
         }
+
+        public DataTable ValidarUsuario(string usuario, string pass)
+        {
+            DataTable dt = new DataTable();
+
+            string query = @"
+        SELECT u.idusuario,
+               u.usuario,
+               u.acceso,
+               e.nombre,
+               e.apellidos
+        FROM   dbo.usuario  u
+        INNER JOIN dbo.empleado e ON u.idempleado = e.idempleado
+        WHERE  u.usuario = @usuario
+          AND  u.pass    = @pass
+          AND  u.estado  = 'ACTIVO'";
+
+            using (SqlConnection cnn = new SqlConnection(Conexion.Conn))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, cnn))
+                {
+                    cmd.Parameters.AddWithValue("@usuario", usuario);
+                    cmd.Parameters.AddWithValue("@pass", pass);
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                }
+            }
+
+            return dt;
+        }
     }
 }

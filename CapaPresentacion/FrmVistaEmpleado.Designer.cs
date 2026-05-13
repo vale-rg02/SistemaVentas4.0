@@ -44,11 +44,12 @@
             // dlistado
             // 
             this.dlistado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dlistado.Location = new System.Drawing.Point(34, 132);
+            this.dlistado.Location = new System.Drawing.Point(26, 107);
+            this.dlistado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dlistado.Name = "dlistado";
             this.dlistado.RowHeadersWidth = 51;
             this.dlistado.RowTemplate.Height = 24;
-            this.dlistado.Size = new System.Drawing.Size(728, 202);
+            this.dlistado.Size = new System.Drawing.Size(546, 164);
             this.dlistado.TabIndex = 14;
             this.dlistado.DoubleClick += new System.EventHandler(this.dlistado_DoubleClick);
             // 
@@ -58,16 +59,18 @@
             this.panel1.Controls.Add(this.btnbuscar);
             this.panel1.Controls.Add(this.txtbuscar);
             this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Location = new System.Drawing.Point(34, 17);
+            this.panel1.Location = new System.Drawing.Point(26, 14);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(728, 94);
+            this.panel1.Size = new System.Drawing.Size(546, 76);
             this.panel1.TabIndex = 13;
             // 
             // btnsalir
             // 
-            this.btnsalir.Location = new System.Drawing.Point(648, 38);
+            this.btnsalir.Location = new System.Drawing.Point(486, 31);
+            this.btnsalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(75, 23);
+            this.btnsalir.Size = new System.Drawing.Size(56, 19);
             this.btnsalir.TabIndex = 5;
             this.btnsalir.Text = "&Salir";
             this.btnsalir.UseVisualStyleBackColor = true;
@@ -75,9 +78,10 @@
             // 
             // btnbuscar
             // 
-            this.btnbuscar.Location = new System.Drawing.Point(566, 38);
+            this.btnbuscar.Location = new System.Drawing.Point(424, 31);
+            this.btnbuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnbuscar.Size = new System.Drawing.Size(56, 19);
             this.btnbuscar.TabIndex = 4;
             this.btnbuscar.Text = "&Buscar";
             this.btnbuscar.UseVisualStyleBackColor = true;
@@ -85,18 +89,21 @@
             // 
             // txtbuscar
             // 
-            this.txtbuscar.Location = new System.Drawing.Point(199, 39);
+            this.txtbuscar.Location = new System.Drawing.Point(149, 32);
+            this.txtbuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtbuscar.Name = "txtbuscar";
-            this.txtbuscar.Size = new System.Drawing.Size(360, 22);
+            this.txtbuscar.Size = new System.Drawing.Size(271, 20);
             this.txtbuscar.TabIndex = 3;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.rbtndni);
             this.groupBox1.Controls.Add(this.rbtnnombre);
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Location = new System.Drawing.Point(2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(178, 82);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(134, 67);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Criterio de Busqueda";
@@ -104,9 +111,10 @@
             // rbtndni
             // 
             this.rbtndni.AutoSize = true;
-            this.rbtndni.Location = new System.Drawing.Point(98, 36);
+            this.rbtndni.Location = new System.Drawing.Point(74, 29);
+            this.rbtndni.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbtndni.Name = "rbtndni";
-            this.rbtndni.Size = new System.Drawing.Size(45, 20);
+            this.rbtndni.Size = new System.Drawing.Size(41, 17);
             this.rbtndni.TabIndex = 1;
             this.rbtndni.TabStop = true;
             this.rbtndni.Text = "Dni";
@@ -115,9 +123,10 @@
             // rbtnnombre
             // 
             this.rbtnnombre.AutoSize = true;
-            this.rbtnnombre.Location = new System.Drawing.Point(18, 36);
+            this.rbtnnombre.Location = new System.Drawing.Point(14, 29);
+            this.rbtnnombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbtnnombre.Name = "rbtnnombre";
-            this.rbtnnombre.Size = new System.Drawing.Size(74, 20);
+            this.rbtnnombre.Size = new System.Drawing.Size(62, 17);
             this.rbtnnombre.TabIndex = 0;
             this.rbtnnombre.TabStop = true;
             this.rbtnnombre.Text = "Nombre";
@@ -125,11 +134,13 @@
             // 
             // FrmVistaEmpleado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 349);
+            this.ClientSize = new System.Drawing.Size(600, 284);
             this.Controls.Add(this.dlistado);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmVistaEmpleado";
             this.Text = "FrmVistaEmpleado";
             this.Load += new System.EventHandler(this.FrmVistaEmpleado_Load);

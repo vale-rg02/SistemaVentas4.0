@@ -287,6 +287,17 @@ namespace CapaPresentacion
             mnuconfiguraciones.Height = 37;
         }
 
+        private void btncliente_Click(object sender, EventArgs e)
+        {
+            FrmListadoCliente frm = new FrmListadoCliente();
+            frm.MdiParent = this;
+            frm.Show();
+            frm.BringToFront();
+
+            mnuconfiguraciones.Width = 214;
+            mnuconfiguraciones.Height = 37;
+        }
+
         private void btngenerarcompra_Click(object sender, EventArgs e)
         {
 

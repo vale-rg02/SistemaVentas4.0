@@ -71,5 +71,12 @@ namespace CapaNegocio
 
             return objeto.Logeo(objeto);
         }
+
+        public DataTable ValidarUsuario(string usuario, string pass)
+        {
+            CDUsuario cd = new CDUsuario();
+            return cd.ValidarUsuario(usuario, pass);
+        }
+
     }
 }
