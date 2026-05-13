@@ -227,7 +227,7 @@ namespace CapaPresentacion
             this.mnualmacen.MaximumSize = new System.Drawing.Size(160, 98);
             this.mnualmacen.MinimumSize = new System.Drawing.Size(160, 30);
             this.mnualmacen.Name = "mnualmacen";
-            this.mnualmacen.Size = new System.Drawing.Size(160, 40);
+            this.mnualmacen.Size = new System.Drawing.Size(160, 38);
             this.mnualmacen.TabIndex = 0;
             // 
             // btncategoria
@@ -285,7 +285,7 @@ namespace CapaPresentacion
             this.mnucompra.Controls.Add(this.btnproveedores);
             this.mnucompra.Controls.Add(this.btngenerarcompra);
             this.mnucompra.Controls.Add(this.btncompras);
-            this.mnucompra.Location = new System.Drawing.Point(2, 129);
+            this.mnucompra.Location = new System.Drawing.Point(2, 127);
             this.mnucompra.Margin = new System.Windows.Forms.Padding(2);
             this.mnucompra.MaximumSize = new System.Drawing.Size(160, 98);
             this.mnucompra.MinimumSize = new System.Drawing.Size(160, 30);
@@ -348,7 +348,7 @@ namespace CapaPresentacion
             this.mnuventa.Controls.Add(this.btnclientes);
             this.mnuventa.Controls.Add(this.btngenerarventa);
             this.mnuventa.Controls.Add(this.btnventas);
-            this.mnuventa.Location = new System.Drawing.Point(2, 171);
+            this.mnuventa.Location = new System.Drawing.Point(2, 169);
             this.mnuventa.Margin = new System.Windows.Forms.Padding(2);
             this.mnuventa.MaximumSize = new System.Drawing.Size(160, 98);
             this.mnuventa.MinimumSize = new System.Drawing.Size(160, 30);
@@ -412,7 +412,7 @@ namespace CapaPresentacion
             this.mnuconsultas.Controls.Add(this.btncomprafechas);
             this.mnuconsultas.Controls.Add(this.btnventafecha);
             this.mnuconsultas.Controls.Add(this.btnconsultas);
-            this.mnuconsultas.Location = new System.Drawing.Point(2, 212);
+            this.mnuconsultas.Location = new System.Drawing.Point(2, 210);
             this.mnuconsultas.Margin = new System.Windows.Forms.Padding(2);
             this.mnuconsultas.MaximumSize = new System.Drawing.Size(160, 130);
             this.mnuconsultas.MinimumSize = new System.Drawing.Size(160, 30);
@@ -491,7 +491,7 @@ namespace CapaPresentacion
             this.mnuconfiguraciones.Controls.Add(this.btnusuarios);
             this.mnuconfiguraciones.Controls.Add(this.btnempleados);
             this.mnuconfiguraciones.Controls.Add(this.btnconfiguraciones);
-            this.mnuconfiguraciones.Location = new System.Drawing.Point(2, 254);
+            this.mnuconfiguraciones.Location = new System.Drawing.Point(2, 252);
             this.mnuconfiguraciones.Margin = new System.Windows.Forms.Padding(2);
             this.mnuconfiguraciones.MaximumSize = new System.Drawing.Size(160, 98);
             this.mnuconfiguraciones.MinimumSize = new System.Drawing.Size(160, 30);
@@ -555,7 +555,7 @@ namespace CapaPresentacion
             this.mnureportes.Controls.Add(this.btnreportecliente);
             this.mnureportes.Controls.Add(this.btnreporteproducto);
             this.mnureportes.Controls.Add(this.btnreportes);
-            this.mnureportes.Location = new System.Drawing.Point(2, 293);
+            this.mnureportes.Location = new System.Drawing.Point(2, 291);
             this.mnureportes.Margin = new System.Windows.Forms.Padding(2);
             this.mnureportes.MaximumSize = new System.Drawing.Size(160, 130);
             this.mnureportes.MinimumSize = new System.Drawing.Size(160, 30);
