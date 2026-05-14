@@ -330,7 +330,13 @@ namespace CapaPresentacion
 
         private void btngenerarventa_Click(object sender, EventArgs e)
         {
+            FrmListadoVenta frm = new FrmListadoVenta();
+            frm.MdiParent = this;
+            frm.Show();
+            frm.BringToFront();
 
+            mnuconfiguraciones.Width = 214;
+            mnuconfiguraciones.Height = 37;
         }
 
         private void btnventafecha_Click(object sender, EventArgs e)

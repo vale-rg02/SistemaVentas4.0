@@ -130,19 +130,6 @@ namespace CapaPresentacion
             Application.Exit();
         }
 
-        private void btnrestaurar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Normal;
-            btnmaximizar.Visible = true;
-        }
-
-        private void btnmaximizar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Maximized;
-            btnmaximizar.Visible = false;
-            btnrestaurar.Visible = true;
-        }
-
         private void btnminimizar_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;

@@ -109,19 +109,19 @@ namespace CapaPresentacion
             this.panel1.Controls.Add(this.lblNombreUsuario);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(916, 81);
+            this.panel1.Size = new System.Drawing.Size(1221, 100);
             this.panel1.TabIndex = 0;
             // 
             // btnmaximizar
             // 
             this.btnmaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnmaximizar.Image = ((System.Drawing.Image)(resources.GetObject("btnmaximizar.Image")));
-            this.btnmaximizar.Location = new System.Drawing.Point(864, 10);
-            this.btnmaximizar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnmaximizar.Location = new System.Drawing.Point(1152, 12);
+            this.btnmaximizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnmaximizar.Name = "btnmaximizar";
-            this.btnmaximizar.Size = new System.Drawing.Size(19, 20);
+            this.btnmaximizar.Size = new System.Drawing.Size(25, 25);
             this.btnmaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnmaximizar.TabIndex = 3;
             this.btnmaximizar.TabStop = false;
@@ -131,10 +131,10 @@ namespace CapaPresentacion
             // 
             this.btnrestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnrestaurar.Image = ((System.Drawing.Image)(resources.GetObject("btnrestaurar.Image")));
-            this.btnrestaurar.Location = new System.Drawing.Point(864, 10);
-            this.btnrestaurar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnrestaurar.Location = new System.Drawing.Point(1152, 12);
+            this.btnrestaurar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnrestaurar.Name = "btnrestaurar";
-            this.btnrestaurar.Size = new System.Drawing.Size(19, 20);
+            this.btnrestaurar.Size = new System.Drawing.Size(25, 25);
             this.btnrestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnrestaurar.TabIndex = 2;
             this.btnrestaurar.TabStop = false;
@@ -144,10 +144,10 @@ namespace CapaPresentacion
             // 
             this.btncerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btncerrar.Image = ((System.Drawing.Image)(resources.GetObject("btncerrar.Image")));
-            this.btncerrar.Location = new System.Drawing.Point(888, 10);
-            this.btncerrar.Margin = new System.Windows.Forms.Padding(2);
+            this.btncerrar.Location = new System.Drawing.Point(1184, 12);
+            this.btncerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btncerrar.Name = "btncerrar";
-            this.btncerrar.Size = new System.Drawing.Size(19, 20);
+            this.btncerrar.Size = new System.Drawing.Size(25, 25);
             this.btncerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btncerrar.TabIndex = 1;
             this.btncerrar.TabStop = false;
@@ -157,10 +157,10 @@ namespace CapaPresentacion
             // 
             this.btnminimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnminimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnminimizar.Image")));
-            this.btnminimizar.Location = new System.Drawing.Point(841, 10);
-            this.btnminimizar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnminimizar.Location = new System.Drawing.Point(1121, 12);
+            this.btnminimizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnminimizar.Name = "btnminimizar";
-            this.btnminimizar.Size = new System.Drawing.Size(19, 20);
+            this.btnminimizar.Size = new System.Drawing.Size(25, 25);
             this.btnminimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnminimizar.TabIndex = 0;
             this.btnminimizar.TabStop = false;
@@ -172,9 +172,10 @@ namespace CapaPresentacion
             this.lblIconoUsuario.BackColor = System.Drawing.Color.Transparent;
             this.lblIconoUsuario.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.lblIconoUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblIconoUsuario.Location = new System.Drawing.Point(761, 54);
+            this.lblIconoUsuario.Location = new System.Drawing.Point(1015, 66);
+            this.lblIconoUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIconoUsuario.Name = "lblIconoUsuario";
-            this.lblIconoUsuario.Size = new System.Drawing.Size(33, 25);
+            this.lblIconoUsuario.Size = new System.Drawing.Size(47, 32);
             this.lblIconoUsuario.TabIndex = 4;
             this.lblIconoUsuario.Text = "👤";
             // 
@@ -184,9 +185,10 @@ namespace CapaPresentacion
             this.lblNombreUsuario.BackColor = System.Drawing.Color.Transparent;
             this.lblNombreUsuario.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.lblNombreUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblNombreUsuario.Location = new System.Drawing.Point(789, 59);
+            this.lblNombreUsuario.Location = new System.Drawing.Point(1052, 73);
+            this.lblNombreUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
-            this.lblNombreUsuario.Size = new System.Drawing.Size(0, 19);
+            this.lblNombreUsuario.Size = new System.Drawing.Size(0, 23);
             this.lblNombreUsuario.TabIndex = 5;
             // 
             // flowLayoutPanel1
@@ -200,20 +202,20 @@ namespace CapaPresentacion
             this.flowLayoutPanel1.Controls.Add(this.mnuconfiguraciones);
             this.flowLayoutPanel1.Controls.Add(this.mnureportes);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 81);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 100);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(164, 504);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(219, 620);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(2, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(162, 79);
+            this.pictureBox1.Size = new System.Drawing.Size(216, 97);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -222,12 +224,12 @@ namespace CapaPresentacion
             this.mnualmacen.Controls.Add(this.btncategoria);
             this.mnualmacen.Controls.Add(this.btnproducto);
             this.mnualmacen.Controls.Add(this.btnalmacen);
-            this.mnualmacen.Location = new System.Drawing.Point(2, 85);
-            this.mnualmacen.Margin = new System.Windows.Forms.Padding(2);
-            this.mnualmacen.MaximumSize = new System.Drawing.Size(160, 98);
-            this.mnualmacen.MinimumSize = new System.Drawing.Size(160, 30);
+            this.mnualmacen.Location = new System.Drawing.Point(3, 103);
+            this.mnualmacen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.mnualmacen.MaximumSize = new System.Drawing.Size(213, 121);
+            this.mnualmacen.MinimumSize = new System.Drawing.Size(213, 37);
             this.mnualmacen.Name = "mnualmacen";
-            this.mnualmacen.Size = new System.Drawing.Size(160, 38);
+            this.mnualmacen.Size = new System.Drawing.Size(213, 47);
             this.mnualmacen.TabIndex = 0;
             // 
             // btncategoria
@@ -237,10 +239,10 @@ namespace CapaPresentacion
             this.btncategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncategoria.ForeColor = System.Drawing.Color.White;
-            this.btncategoria.Location = new System.Drawing.Point(48, 66);
-            this.btncategoria.Margin = new System.Windows.Forms.Padding(2);
+            this.btncategoria.Location = new System.Drawing.Point(64, 81);
+            this.btncategoria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btncategoria.Name = "btncategoria";
-            this.btncategoria.Size = new System.Drawing.Size(108, 23);
+            this.btncategoria.Size = new System.Drawing.Size(144, 28);
             this.btncategoria.TabIndex = 2;
             this.btncategoria.Text = "Categoria";
             this.btncategoria.UseVisualStyleBackColor = false;
@@ -253,10 +255,10 @@ namespace CapaPresentacion
             this.btnproducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnproducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnproducto.ForeColor = System.Drawing.Color.White;
-            this.btnproducto.Location = new System.Drawing.Point(48, 40);
-            this.btnproducto.Margin = new System.Windows.Forms.Padding(2);
+            this.btnproducto.Location = new System.Drawing.Point(64, 49);
+            this.btnproducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnproducto.Name = "btnproducto";
-            this.btnproducto.Size = new System.Drawing.Size(108, 23);
+            this.btnproducto.Size = new System.Drawing.Size(144, 28);
             this.btnproducto.TabIndex = 1;
             this.btnproducto.Text = "Producto";
             this.btnproducto.UseVisualStyleBackColor = false;
@@ -271,10 +273,10 @@ namespace CapaPresentacion
             this.btnalmacen.ForeColor = System.Drawing.Color.White;
             this.btnalmacen.Image = ((System.Drawing.Image)(resources.GetObject("btnalmacen.Image")));
             this.btnalmacen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnalmacen.Location = new System.Drawing.Point(2, 2);
-            this.btnalmacen.Margin = new System.Windows.Forms.Padding(2);
+            this.btnalmacen.Location = new System.Drawing.Point(3, 2);
+            this.btnalmacen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnalmacen.Name = "btnalmacen";
-            this.btnalmacen.Size = new System.Drawing.Size(156, 33);
+            this.btnalmacen.Size = new System.Drawing.Size(208, 41);
             this.btnalmacen.TabIndex = 0;
             this.btnalmacen.Text = "Almacén";
             this.btnalmacen.UseVisualStyleBackColor = false;
@@ -285,12 +287,12 @@ namespace CapaPresentacion
             this.mnucompra.Controls.Add(this.btnproveedores);
             this.mnucompra.Controls.Add(this.btngenerarcompra);
             this.mnucompra.Controls.Add(this.btncompras);
-            this.mnucompra.Location = new System.Drawing.Point(2, 127);
-            this.mnucompra.Margin = new System.Windows.Forms.Padding(2);
-            this.mnucompra.MaximumSize = new System.Drawing.Size(160, 98);
-            this.mnucompra.MinimumSize = new System.Drawing.Size(160, 30);
+            this.mnucompra.Location = new System.Drawing.Point(3, 154);
+            this.mnucompra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.mnucompra.MaximumSize = new System.Drawing.Size(213, 121);
+            this.mnucompra.MinimumSize = new System.Drawing.Size(213, 37);
             this.mnucompra.Name = "mnucompra";
-            this.mnucompra.Size = new System.Drawing.Size(160, 38);
+            this.mnucompra.Size = new System.Drawing.Size(213, 47);
             this.mnucompra.TabIndex = 3;
             // 
             // btnproveedores
@@ -300,10 +302,10 @@ namespace CapaPresentacion
             this.btnproveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnproveedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnproveedores.ForeColor = System.Drawing.Color.White;
-            this.btnproveedores.Location = new System.Drawing.Point(49, 64);
-            this.btnproveedores.Margin = new System.Windows.Forms.Padding(2);
+            this.btnproveedores.Location = new System.Drawing.Point(65, 79);
+            this.btnproveedores.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnproveedores.Name = "btnproveedores";
-            this.btnproveedores.Size = new System.Drawing.Size(108, 23);
+            this.btnproveedores.Size = new System.Drawing.Size(144, 28);
             this.btnproveedores.TabIndex = 2;
             this.btnproveedores.Text = "Proveedores";
             this.btnproveedores.UseVisualStyleBackColor = false;
@@ -316,10 +318,10 @@ namespace CapaPresentacion
             this.btngenerarcompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btngenerarcompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btngenerarcompra.ForeColor = System.Drawing.Color.White;
-            this.btngenerarcompra.Location = new System.Drawing.Point(49, 38);
-            this.btngenerarcompra.Margin = new System.Windows.Forms.Padding(2);
+            this.btngenerarcompra.Location = new System.Drawing.Point(65, 47);
+            this.btngenerarcompra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btngenerarcompra.Name = "btngenerarcompra";
-            this.btngenerarcompra.Size = new System.Drawing.Size(108, 23);
+            this.btngenerarcompra.Size = new System.Drawing.Size(144, 28);
             this.btngenerarcompra.TabIndex = 1;
             this.btngenerarcompra.Text = "Generar Compra";
             this.btngenerarcompra.UseVisualStyleBackColor = false;
@@ -334,10 +336,10 @@ namespace CapaPresentacion
             this.btncompras.ForeColor = System.Drawing.Color.White;
             this.btncompras.Image = ((System.Drawing.Image)(resources.GetObject("btncompras.Image")));
             this.btncompras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btncompras.Location = new System.Drawing.Point(2, 2);
-            this.btncompras.Margin = new System.Windows.Forms.Padding(2);
+            this.btncompras.Location = new System.Drawing.Point(3, 2);
+            this.btncompras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btncompras.Name = "btncompras";
-            this.btncompras.Size = new System.Drawing.Size(156, 33);
+            this.btncompras.Size = new System.Drawing.Size(208, 41);
             this.btncompras.TabIndex = 0;
             this.btncompras.Text = "Compras";
             this.btncompras.UseVisualStyleBackColor = false;
@@ -348,12 +350,12 @@ namespace CapaPresentacion
             this.mnuventa.Controls.Add(this.btnclientes);
             this.mnuventa.Controls.Add(this.btngenerarventa);
             this.mnuventa.Controls.Add(this.btnventas);
-            this.mnuventa.Location = new System.Drawing.Point(2, 169);
-            this.mnuventa.Margin = new System.Windows.Forms.Padding(2);
-            this.mnuventa.MaximumSize = new System.Drawing.Size(160, 98);
-            this.mnuventa.MinimumSize = new System.Drawing.Size(160, 30);
+            this.mnuventa.Location = new System.Drawing.Point(3, 205);
+            this.mnuventa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.mnuventa.MaximumSize = new System.Drawing.Size(213, 121);
+            this.mnuventa.MinimumSize = new System.Drawing.Size(213, 37);
             this.mnuventa.Name = "mnuventa";
-            this.mnuventa.Size = new System.Drawing.Size(160, 37);
+            this.mnuventa.Size = new System.Drawing.Size(213, 56);
             this.mnuventa.TabIndex = 4;
             // 
             // btnclientes
@@ -363,10 +365,10 @@ namespace CapaPresentacion
             this.btnclientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnclientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnclientes.ForeColor = System.Drawing.Color.White;
-            this.btnclientes.Location = new System.Drawing.Point(48, 70);
-            this.btnclientes.Margin = new System.Windows.Forms.Padding(2);
+            this.btnclientes.Location = new System.Drawing.Point(64, 86);
+            this.btnclientes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnclientes.Name = "btnclientes";
-            this.btnclientes.Size = new System.Drawing.Size(108, 23);
+            this.btnclientes.Size = new System.Drawing.Size(144, 28);
             this.btnclientes.TabIndex = 2;
             this.btnclientes.Text = "Clientes";
             this.btnclientes.UseVisualStyleBackColor = false;
@@ -379,10 +381,10 @@ namespace CapaPresentacion
             this.btngenerarventa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btngenerarventa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btngenerarventa.ForeColor = System.Drawing.Color.White;
-            this.btngenerarventa.Location = new System.Drawing.Point(48, 44);
-            this.btngenerarventa.Margin = new System.Windows.Forms.Padding(2);
+            this.btngenerarventa.Location = new System.Drawing.Point(64, 54);
+            this.btngenerarventa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btngenerarventa.Name = "btngenerarventa";
-            this.btngenerarventa.Size = new System.Drawing.Size(108, 23);
+            this.btngenerarventa.Size = new System.Drawing.Size(144, 28);
             this.btngenerarventa.TabIndex = 1;
             this.btngenerarventa.Text = "Generar venta";
             this.btngenerarventa.UseVisualStyleBackColor = false;
@@ -397,10 +399,10 @@ namespace CapaPresentacion
             this.btnventas.ForeColor = System.Drawing.Color.White;
             this.btnventas.Image = ((System.Drawing.Image)(resources.GetObject("btnventas.Image")));
             this.btnventas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnventas.Location = new System.Drawing.Point(2, 2);
-            this.btnventas.Margin = new System.Windows.Forms.Padding(2);
+            this.btnventas.Location = new System.Drawing.Point(3, 2);
+            this.btnventas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnventas.Name = "btnventas";
-            this.btnventas.Size = new System.Drawing.Size(160, 38);
+            this.btnventas.Size = new System.Drawing.Size(213, 47);
             this.btnventas.TabIndex = 0;
             this.btnventas.Text = "Ventas";
             this.btnventas.UseVisualStyleBackColor = false;
@@ -412,12 +414,12 @@ namespace CapaPresentacion
             this.mnuconsultas.Controls.Add(this.btncomprafechas);
             this.mnuconsultas.Controls.Add(this.btnventafecha);
             this.mnuconsultas.Controls.Add(this.btnconsultas);
-            this.mnuconsultas.Location = new System.Drawing.Point(2, 210);
-            this.mnuconsultas.Margin = new System.Windows.Forms.Padding(2);
-            this.mnuconsultas.MaximumSize = new System.Drawing.Size(160, 130);
-            this.mnuconsultas.MinimumSize = new System.Drawing.Size(160, 30);
+            this.mnuconsultas.Location = new System.Drawing.Point(3, 265);
+            this.mnuconsultas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.mnuconsultas.MaximumSize = new System.Drawing.Size(213, 160);
+            this.mnuconsultas.MinimumSize = new System.Drawing.Size(213, 37);
             this.mnuconsultas.Name = "mnuconsultas";
-            this.mnuconsultas.Size = new System.Drawing.Size(160, 38);
+            this.mnuconsultas.Size = new System.Drawing.Size(213, 47);
             this.mnuconsultas.TabIndex = 5;
             // 
             // btnstockminimo
@@ -427,10 +429,10 @@ namespace CapaPresentacion
             this.btnstockminimo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnstockminimo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnstockminimo.ForeColor = System.Drawing.Color.White;
-            this.btnstockminimo.Location = new System.Drawing.Point(38, 93);
-            this.btnstockminimo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnstockminimo.Location = new System.Drawing.Point(51, 114);
+            this.btnstockminimo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnstockminimo.Name = "btnstockminimo";
-            this.btnstockminimo.Size = new System.Drawing.Size(120, 23);
+            this.btnstockminimo.Size = new System.Drawing.Size(160, 28);
             this.btnstockminimo.TabIndex = 3;
             this.btnstockminimo.Text = "Stock minimo";
             this.btnstockminimo.UseVisualStyleBackColor = false;
@@ -443,10 +445,10 @@ namespace CapaPresentacion
             this.btncomprafechas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncomprafechas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncomprafechas.ForeColor = System.Drawing.Color.White;
-            this.btncomprafechas.Location = new System.Drawing.Point(38, 67);
-            this.btncomprafechas.Margin = new System.Windows.Forms.Padding(2);
+            this.btncomprafechas.Location = new System.Drawing.Point(51, 82);
+            this.btncomprafechas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btncomprafechas.Name = "btncomprafechas";
-            this.btncomprafechas.Size = new System.Drawing.Size(120, 23);
+            this.btncomprafechas.Size = new System.Drawing.Size(160, 28);
             this.btncomprafechas.TabIndex = 2;
             this.btncomprafechas.Text = "Compras por fecha";
             this.btncomprafechas.UseVisualStyleBackColor = false;
@@ -459,10 +461,10 @@ namespace CapaPresentacion
             this.btnventafecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnventafecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnventafecha.ForeColor = System.Drawing.Color.White;
-            this.btnventafecha.Location = new System.Drawing.Point(38, 41);
-            this.btnventafecha.Margin = new System.Windows.Forms.Padding(2);
+            this.btnventafecha.Location = new System.Drawing.Point(51, 50);
+            this.btnventafecha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnventafecha.Name = "btnventafecha";
-            this.btnventafecha.Size = new System.Drawing.Size(120, 23);
+            this.btnventafecha.Size = new System.Drawing.Size(160, 28);
             this.btnventafecha.TabIndex = 1;
             this.btnventafecha.Text = "Ventas por fecha";
             this.btnventafecha.UseVisualStyleBackColor = false;
@@ -477,10 +479,10 @@ namespace CapaPresentacion
             this.btnconsultas.ForeColor = System.Drawing.Color.White;
             this.btnconsultas.Image = ((System.Drawing.Image)(resources.GetObject("btnconsultas.Image")));
             this.btnconsultas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnconsultas.Location = new System.Drawing.Point(2, 2);
-            this.btnconsultas.Margin = new System.Windows.Forms.Padding(2);
+            this.btnconsultas.Location = new System.Drawing.Point(3, 2);
+            this.btnconsultas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnconsultas.Name = "btnconsultas";
-            this.btnconsultas.Size = new System.Drawing.Size(156, 35);
+            this.btnconsultas.Size = new System.Drawing.Size(208, 43);
             this.btnconsultas.TabIndex = 0;
             this.btnconsultas.Text = "Consultas";
             this.btnconsultas.UseVisualStyleBackColor = false;
@@ -491,12 +493,12 @@ namespace CapaPresentacion
             this.mnuconfiguraciones.Controls.Add(this.btnusuarios);
             this.mnuconfiguraciones.Controls.Add(this.btnempleados);
             this.mnuconfiguraciones.Controls.Add(this.btnconfiguraciones);
-            this.mnuconfiguraciones.Location = new System.Drawing.Point(2, 252);
-            this.mnuconfiguraciones.Margin = new System.Windows.Forms.Padding(2);
-            this.mnuconfiguraciones.MaximumSize = new System.Drawing.Size(160, 98);
-            this.mnuconfiguraciones.MinimumSize = new System.Drawing.Size(160, 30);
+            this.mnuconfiguraciones.Location = new System.Drawing.Point(3, 316);
+            this.mnuconfiguraciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.mnuconfiguraciones.MaximumSize = new System.Drawing.Size(213, 121);
+            this.mnuconfiguraciones.MinimumSize = new System.Drawing.Size(213, 37);
             this.mnuconfiguraciones.Name = "mnuconfiguraciones";
-            this.mnuconfiguraciones.Size = new System.Drawing.Size(160, 35);
+            this.mnuconfiguraciones.Size = new System.Drawing.Size(213, 43);
             this.mnuconfiguraciones.TabIndex = 6;
             // 
             // btnusuarios
@@ -506,10 +508,10 @@ namespace CapaPresentacion
             this.btnusuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnusuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnusuarios.ForeColor = System.Drawing.Color.White;
-            this.btnusuarios.Location = new System.Drawing.Point(37, 65);
-            this.btnusuarios.Margin = new System.Windows.Forms.Padding(2);
+            this.btnusuarios.Location = new System.Drawing.Point(49, 80);
+            this.btnusuarios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnusuarios.Name = "btnusuarios";
-            this.btnusuarios.Size = new System.Drawing.Size(120, 23);
+            this.btnusuarios.Size = new System.Drawing.Size(160, 28);
             this.btnusuarios.TabIndex = 2;
             this.btnusuarios.Text = "Usuarios";
             this.btnusuarios.UseVisualStyleBackColor = false;
@@ -522,10 +524,10 @@ namespace CapaPresentacion
             this.btnempleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnempleados.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnempleados.ForeColor = System.Drawing.Color.White;
-            this.btnempleados.Location = new System.Drawing.Point(37, 39);
-            this.btnempleados.Margin = new System.Windows.Forms.Padding(2);
+            this.btnempleados.Location = new System.Drawing.Point(49, 48);
+            this.btnempleados.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnempleados.Name = "btnempleados";
-            this.btnempleados.Size = new System.Drawing.Size(120, 23);
+            this.btnempleados.Size = new System.Drawing.Size(160, 28);
             this.btnempleados.TabIndex = 1;
             this.btnempleados.Text = "Empleados";
             this.btnempleados.UseVisualStyleBackColor = false;
@@ -540,10 +542,10 @@ namespace CapaPresentacion
             this.btnconfiguraciones.ForeColor = System.Drawing.Color.White;
             this.btnconfiguraciones.Image = ((System.Drawing.Image)(resources.GetObject("btnconfiguraciones.Image")));
             this.btnconfiguraciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnconfiguraciones.Location = new System.Drawing.Point(2, 2);
-            this.btnconfiguraciones.Margin = new System.Windows.Forms.Padding(2);
+            this.btnconfiguraciones.Location = new System.Drawing.Point(3, 2);
+            this.btnconfiguraciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnconfiguraciones.Name = "btnconfiguraciones";
-            this.btnconfiguraciones.Size = new System.Drawing.Size(158, 33);
+            this.btnconfiguraciones.Size = new System.Drawing.Size(211, 41);
             this.btnconfiguraciones.TabIndex = 0;
             this.btnconfiguraciones.Text = "Config.";
             this.btnconfiguraciones.UseVisualStyleBackColor = false;
@@ -555,12 +557,12 @@ namespace CapaPresentacion
             this.mnureportes.Controls.Add(this.btnreportecliente);
             this.mnureportes.Controls.Add(this.btnreporteproducto);
             this.mnureportes.Controls.Add(this.btnreportes);
-            this.mnureportes.Location = new System.Drawing.Point(2, 291);
-            this.mnureportes.Margin = new System.Windows.Forms.Padding(2);
-            this.mnureportes.MaximumSize = new System.Drawing.Size(160, 130);
-            this.mnureportes.MinimumSize = new System.Drawing.Size(160, 30);
+            this.mnureportes.Location = new System.Drawing.Point(3, 363);
+            this.mnureportes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.mnureportes.MaximumSize = new System.Drawing.Size(213, 160);
+            this.mnureportes.MinimumSize = new System.Drawing.Size(213, 37);
             this.mnureportes.Name = "mnureportes";
-            this.mnureportes.Size = new System.Drawing.Size(160, 40);
+            this.mnureportes.Size = new System.Drawing.Size(213, 49);
             this.mnureportes.TabIndex = 7;
             // 
             // btnreporteempleado
@@ -570,10 +572,10 @@ namespace CapaPresentacion
             this.btnreporteempleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnreporteempleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnreporteempleado.ForeColor = System.Drawing.Color.White;
-            this.btnreporteempleado.Location = new System.Drawing.Point(38, 96);
-            this.btnreporteempleado.Margin = new System.Windows.Forms.Padding(2);
+            this.btnreporteempleado.Location = new System.Drawing.Point(51, 118);
+            this.btnreporteempleado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnreporteempleado.Name = "btnreporteempleado";
-            this.btnreporteempleado.Size = new System.Drawing.Size(120, 23);
+            this.btnreporteempleado.Size = new System.Drawing.Size(160, 28);
             this.btnreporteempleado.TabIndex = 3;
             this.btnreporteempleado.Text = "Empleados";
             this.btnreporteempleado.UseVisualStyleBackColor = false;
@@ -586,10 +588,10 @@ namespace CapaPresentacion
             this.btnreportecliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnreportecliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnreportecliente.ForeColor = System.Drawing.Color.White;
-            this.btnreportecliente.Location = new System.Drawing.Point(38, 70);
-            this.btnreportecliente.Margin = new System.Windows.Forms.Padding(2);
+            this.btnreportecliente.Location = new System.Drawing.Point(51, 86);
+            this.btnreportecliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnreportecliente.Name = "btnreportecliente";
-            this.btnreportecliente.Size = new System.Drawing.Size(120, 23);
+            this.btnreportecliente.Size = new System.Drawing.Size(160, 28);
             this.btnreportecliente.TabIndex = 2;
             this.btnreportecliente.Text = "Clientes";
             this.btnreportecliente.UseVisualStyleBackColor = false;
@@ -602,10 +604,10 @@ namespace CapaPresentacion
             this.btnreporteproducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnreporteproducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnreporteproducto.ForeColor = System.Drawing.Color.White;
-            this.btnreporteproducto.Location = new System.Drawing.Point(38, 44);
-            this.btnreporteproducto.Margin = new System.Windows.Forms.Padding(2);
+            this.btnreporteproducto.Location = new System.Drawing.Point(51, 54);
+            this.btnreporteproducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnreporteproducto.Name = "btnreporteproducto";
-            this.btnreporteproducto.Size = new System.Drawing.Size(120, 23);
+            this.btnreporteproducto.Size = new System.Drawing.Size(160, 28);
             this.btnreporteproducto.TabIndex = 1;
             this.btnreporteproducto.Text = "Productos";
             this.btnreporteproducto.UseVisualStyleBackColor = false;
@@ -620,10 +622,10 @@ namespace CapaPresentacion
             this.btnreportes.ForeColor = System.Drawing.Color.White;
             this.btnreportes.Image = ((System.Drawing.Image)(resources.GetObject("btnreportes.Image")));
             this.btnreportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnreportes.Location = new System.Drawing.Point(2, 2);
-            this.btnreportes.Margin = new System.Windows.Forms.Padding(2);
+            this.btnreportes.Location = new System.Drawing.Point(3, 2);
+            this.btnreportes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnreportes.Name = "btnreportes";
-            this.btnreportes.Size = new System.Drawing.Size(156, 38);
+            this.btnreportes.Size = new System.Drawing.Size(208, 47);
             this.btnreportes.TabIndex = 0;
             this.btnreportes.Text = "Reportes";
             this.btnreportes.UseVisualStyleBackColor = false;
@@ -645,18 +647,19 @@ namespace CapaPresentacion
             this.panel2.Controls.Add(this.btncliente);
             this.panel2.Controls.Add(this.btnCerrarSesion);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(164, 81);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(219, 100);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(752, 81);
+            this.panel2.Size = new System.Drawing.Size(1002, 100);
             this.panel2.TabIndex = 2;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(431, 65);
+            this.label6.Location = new System.Drawing.Point(575, 80);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 13);
+            this.label6.Size = new System.Drawing.Size(65, 16);
             this.label6.TabIndex = 11;
             this.label6.Text = "Stock Min";
             // 
@@ -664,18 +667,20 @@ namespace CapaPresentacion
             // 
             this.btnstockminn.BackColor = System.Drawing.SystemColors.Control;
             this.btnstockminn.Image = ((System.Drawing.Image)(resources.GetObject("btnstockminn.Image")));
-            this.btnstockminn.Location = new System.Drawing.Point(420, 2);
+            this.btnstockminn.Location = new System.Drawing.Point(560, 2);
+            this.btnstockminn.Margin = new System.Windows.Forms.Padding(4);
             this.btnstockminn.Name = "btnstockminn";
-            this.btnstockminn.Size = new System.Drawing.Size(75, 62);
+            this.btnstockminn.Size = new System.Drawing.Size(100, 76);
             this.btnstockminn.TabIndex = 10;
             this.btnstockminn.UseVisualStyleBackColor = false;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(348, 65);
+            this.label5.Location = new System.Drawing.Point(464, 80);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 13);
+            this.label5.Size = new System.Drawing.Size(77, 16);
             this.label5.TabIndex = 9;
             this.label5.Text = "Empleados";
             // 
@@ -683,9 +688,10 @@ namespace CapaPresentacion
             // 
             this.btnempleado.BackColor = System.Drawing.SystemColors.Control;
             this.btnempleado.Image = ((System.Drawing.Image)(resources.GetObject("btnempleado.Image")));
-            this.btnempleado.Location = new System.Drawing.Point(339, 2);
+            this.btnempleado.Location = new System.Drawing.Point(452, 2);
+            this.btnempleado.Margin = new System.Windows.Forms.Padding(4);
             this.btnempleado.Name = "btnempleado";
-            this.btnempleado.Size = new System.Drawing.Size(75, 62);
+            this.btnempleado.Size = new System.Drawing.Size(100, 76);
             this.btnempleado.TabIndex = 8;
             this.btnempleado.UseVisualStyleBackColor = false;
             this.btnempleado.Click += new System.EventHandler(this.btnempleados_Click);
@@ -693,9 +699,10 @@ namespace CapaPresentacion
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(272, 65);
+            this.label4.Location = new System.Drawing.Point(363, 80);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 13);
+            this.label4.Size = new System.Drawing.Size(62, 16);
             this.label4.TabIndex = 7;
             this.label4.Text = "Compras";
             // 
@@ -703,9 +710,10 @@ namespace CapaPresentacion
             // 
             this.btncompra.BackColor = System.Drawing.SystemColors.Control;
             this.btncompra.Image = ((System.Drawing.Image)(resources.GetObject("btncompra.Image")));
-            this.btncompra.Location = new System.Drawing.Point(257, 2);
+            this.btncompra.Location = new System.Drawing.Point(343, 2);
+            this.btncompra.Margin = new System.Windows.Forms.Padding(4);
             this.btncompra.Name = "btncompra";
-            this.btncompra.Size = new System.Drawing.Size(75, 62);
+            this.btncompra.Size = new System.Drawing.Size(100, 76);
             this.btncompra.TabIndex = 6;
             this.btncompra.UseVisualStyleBackColor = false;
             this.btncompra.Click += new System.EventHandler(this.btncompras_Click);
@@ -713,9 +721,10 @@ namespace CapaPresentacion
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(194, 65);
+            this.label3.Location = new System.Drawing.Point(259, 80);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.Size = new System.Drawing.Size(49, 16);
             this.label3.TabIndex = 5;
             this.label3.Text = "Ventas";
             // 
@@ -723,19 +732,21 @@ namespace CapaPresentacion
             // 
             this.btnventa.BackColor = System.Drawing.SystemColors.Control;
             this.btnventa.Image = ((System.Drawing.Image)(resources.GetObject("btnventa.Image")));
-            this.btnventa.Location = new System.Drawing.Point(176, 2);
+            this.btnventa.Location = new System.Drawing.Point(235, 2);
+            this.btnventa.Margin = new System.Windows.Forms.Padding(4);
             this.btnventa.Name = "btnventa";
-            this.btnventa.Size = new System.Drawing.Size(75, 62);
+            this.btnventa.Size = new System.Drawing.Size(100, 76);
             this.btnventa.TabIndex = 4;
             this.btnventa.UseVisualStyleBackColor = false;
-            this.btnventa.Click += new System.EventHandler(this.btnventas_Click);
+            this.btnventa.Click += new System.EventHandler(this.btngenerarventa_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(105, 65);
+            this.label2.Location = new System.Drawing.Point(140, 80);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.Size = new System.Drawing.Size(68, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "Productos";
             // 
@@ -743,9 +754,10 @@ namespace CapaPresentacion
             // 
             this.btnproductos.BackColor = System.Drawing.SystemColors.Control;
             this.btnproductos.Image = ((System.Drawing.Image)(resources.GetObject("btnproductos.Image")));
-            this.btnproductos.Location = new System.Drawing.Point(95, 2);
+            this.btnproductos.Location = new System.Drawing.Point(127, 2);
+            this.btnproductos.Margin = new System.Windows.Forms.Padding(4);
             this.btnproductos.Name = "btnproductos";
-            this.btnproductos.Size = new System.Drawing.Size(75, 62);
+            this.btnproductos.Size = new System.Drawing.Size(100, 76);
             this.btnproductos.TabIndex = 2;
             this.btnproductos.UseVisualStyleBackColor = false;
             this.btnproductos.Click += new System.EventHandler(this.btnproducto_Click);
@@ -753,9 +765,10 @@ namespace CapaPresentacion
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 65);
+            this.label1.Location = new System.Drawing.Point(40, 80);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.Size = new System.Drawing.Size(55, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Clientes";
             // 
@@ -763,9 +776,10 @@ namespace CapaPresentacion
             // 
             this.btncliente.BackColor = System.Drawing.SystemColors.Control;
             this.btncliente.Image = ((System.Drawing.Image)(resources.GetObject("btncliente.Image")));
-            this.btncliente.Location = new System.Drawing.Point(14, 2);
+            this.btncliente.Location = new System.Drawing.Point(19, 2);
+            this.btncliente.Margin = new System.Windows.Forms.Padding(4);
             this.btncliente.Name = "btncliente";
-            this.btncliente.Size = new System.Drawing.Size(75, 62);
+            this.btncliente.Size = new System.Drawing.Size(100, 76);
             this.btncliente.TabIndex = 0;
             this.btncliente.UseVisualStyleBackColor = false;
             this.btncliente.Click += new System.EventHandler(this.btncliente_Click);
@@ -780,9 +794,10 @@ namespace CapaPresentacion
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.btnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.Image")));
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(629, 5);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(839, 6);
+            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(4);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(120, 34);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(160, 42);
             this.btnCerrarSesion.TabIndex = 12;
             this.btnCerrarSesion.Text = "  Cerrar Sesión";
             this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -798,15 +813,15 @@ namespace CapaPresentacion
             // 
             // FrmInicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(916, 585);
+            this.ClientSize = new System.Drawing.Size(1221, 720);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmInicio";
             this.Text = "FrmInicio";
             this.panel1.ResumeLayout(false);
